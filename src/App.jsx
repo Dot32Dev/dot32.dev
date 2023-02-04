@@ -11,14 +11,6 @@ function App() {
       <h2>Featured</h2>
 
       <Project
-        name="Dot32"
-        link="https://dot32.dev"
-        image="https://avatars.githubusercontent.com/u/61964090?v=4"
-        tags="Web, Rust"
-        description="A website for my personal projects and blog posts."
-      />
-
-      <Project
         name="Discord Timestamp Generator"
         link="https://discordtimestampgenerator.netlify.app/"
         image="https://cdn.discordapp.com/attachments/577832597686583310/918749004714639400/Screen_Shot_2021-12-10_at_14.20.21.png"
@@ -35,6 +27,62 @@ function App() {
       />
 
       <h2>Recent</h2>
+
+      <Project
+        name="Discord Timezone Generator"
+        link="https://discordtimezonegenerator.netlify.app/"
+        image="https://user-images.githubusercontent.com/61964090/215656901-26117c69-beda-4dfa-a008-be66848c3cc2.png"
+        tags="Website"
+        description="Show your timezone in your Discord profile for others to see!"
+      />
+
+      <Project
+        name="Gui Repo List"
+        link=""
+        image="https://cdn.discordapp.com/attachments/577832597686583310/1071380937788624906/Screenshot_2023-02-04_at_18.45.10.png"
+        tags="Rust compiler required"
+        description="View how many stars your repos have in a GUI application written with Iced"
+      />
+
+      <Project
+        name="Timer bot V2"
+        link="https://discord.com/api/oauth2/authorize?client_id=1040831863381557321&permissions=277025392640&scope=bot%20applications.commands"
+        image="https://cdn.discordapp.com/attachments/577832597686583310/1071380236974960690/Screenshot_2023-02-04_at_18.42.26.png"
+        tags="Discord bot"
+        description="The original timer bot, rewritten to use slash commands!"
+      />
+
+      <Project
+        name="Pullboy"
+        link="https://github.com/Dot32IsCool/pullboy"
+        image="https://cdn.discordapp.com/attachments/577832597686583310/1071378776824479754/Screenshot_2023-02-04_at_18.36.39.png"
+        tags="Shell script"
+        description="Automatically pulls changes and redeployes a Node project when a git repo is updated"
+      />
+
+      <Project
+        name="Draggable List"
+        link="https://github.com/Dot32IsCool/dragable-list"
+        image="https://user-images.githubusercontent.com/61964090/216762179-2765c536-db6d-4059-8231-26ba95ed1d4b.png"
+        tags="Website"
+        description="A list that can be rearanged by dragging its items"
+      />
+      
+      <Project
+        name="New Connect 4"
+        link="https://github.com/Dot32IsCool/new_connect_four"
+        image="https://cdn.discordapp.com/attachments/577832597686583310/1071376221197316156/Screenshot_2023-02-04_at_18.26.15.png"
+        tags="Rust compiler required"
+        description="A rewrite of my Rust connect 4 game, but this time with much more experience and a better understanding of Rust"
+      />
+
+      <Project
+        name="Just a clock"
+        link="https://just-a-clock.netlify.app/"
+        image="https://user-images.githubusercontent.com/61964090/198535612-8794fa4c-4b82-4aed-b248-6ad35f7072d9.png"
+        tags="Website"
+        description="Just a minimalistic clock"
+      />
 
       <Project
         name="Wave Function Collapse"
@@ -131,6 +179,8 @@ function App() {
         tags="Windows, MacOS"
         description="Contrary to the name, most people take a while to finish, due to he janky af controls. Nevertheless, this game has speedrunning potential"
       />  
+
+      <p> Also see my <a href="github.com/Dot32IsCool">Github</a> for more projects </p>
     </div>
   )
 }

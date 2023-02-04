@@ -38,7 +38,7 @@ function App() {
 
       <Project
         name="Gui Repo List"
-        link=""
+        link="https://github.com/Dot32IsCool/gui_repo_list"
         image="https://cdn.discordapp.com/attachments/577832597686583310/1071380937788624906/Screenshot_2023-02-04_at_18.45.10.png"
         tags="Rust compiler required"
         description="View how many stars your repos have in a GUI application written with Iced"

@@ -26,7 +26,7 @@ function App() {
         description="Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!"
       />
 
-      <h2>Recent</h2>
+      <h2>Recent <span>(Last updated 4th Feb 2023)</span></h2>
 
       <Project
         name="Discord Timezone Generator"

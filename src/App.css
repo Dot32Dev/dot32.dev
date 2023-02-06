@@ -82,6 +82,7 @@ header a {
 
 header a:hover {
 	opacity: 0.7;
+  text-decoration: none;
 }
 
 .cta {

@@ -26,12 +26,12 @@ function App() {
         description="Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!"
       />
 
-      <h2>Recent <span>(Last updated 4th Feb 2023)</span></h2>
+      <h2>Recent <span>(Last updated 6th Feb 2023)</span></h2>
 
       <Project
         name="Discord Timezone Generator"
         link="https://discordtimezonegenerator.netlify.app/"
-        image="https://user-images.githubusercontent.com/61964090/215656901-26117c69-beda-4dfa-a008-be66848c3cc2.png"
+        image="https://cdn.discordapp.com/attachments/577832597686583310/1072069099972206662/Screenshot_2023-02-06_at_16.19.36.png"
         tags="Website"
         description="Show your timezone in your Discord profile for others to see!"
       />
@@ -47,7 +47,7 @@ function App() {
       <Project
         name="Timer bot V2"
         link="https://discord.com/api/oauth2/authorize?client_id=1040831863381557321&permissions=277025392640&scope=bot%20applications.commands"
-        image="https://cdn.discordapp.com/attachments/577832597686583310/1071380236974960690/Screenshot_2023-02-04_at_18.42.26.png"
+        image="https://user-images.githubusercontent.com/61964090/216919656-9b860a81-ba00-47e2-ae32-5a626b3dfed6.png"
         tags="Discord bot"
         description="The original timer bot, rewritten to use slash commands!"
       />

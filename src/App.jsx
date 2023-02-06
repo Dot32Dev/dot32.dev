@@ -2,12 +2,19 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import './App.css'
 import Project from './Project'
+import Header from './Header'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <div className="App">
+      <Header />
+
+      <br/>
+      <br/>
+      <br/>
+
       <h2>Featured</h2>
 
       <Project

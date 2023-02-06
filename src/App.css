@@ -78,6 +78,7 @@ header a {
 	color: white;
 	text-decoration: none;
 	transition: all 0.2s;
+  line-height: 1.1;
 }
 
 header a:hover {

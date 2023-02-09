@@ -21,7 +21,7 @@ h2 span {
 @media only screen and (max-width: 470) {
 	#root {
 		padding: 0;
-    background-color: #282c34;
+    /* background-color: #282c34; */
 	}
 }
 

@@ -79,6 +79,7 @@ header a {
 	text-decoration: none;
 	transition: all 0.2s;
   line-height: 1.1;
+  font-weight: 800;
 }
 
 header a:hover {

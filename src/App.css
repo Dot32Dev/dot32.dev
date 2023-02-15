@@ -106,3 +106,7 @@ header a:hover {
 	scale: 1.05;
 	opacity: 1.0;
 }
+
+video {
+  max-width: 600px;
+}

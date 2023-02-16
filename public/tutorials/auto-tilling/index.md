@@ -1,13 +1,13 @@
 # Basic Auto Tilling
 Build your own auto tilling implementation!
 
-![auto tilling thumbnail](/src/pages/tutorials/auto-tilling/thumb.gif)
+![auto tilling thumbnail](/tutorials/auto-tilling/thumb.gif)
 
 Each tile must keep a number, we will call this the tiles "state". Every possible combination of connected tiles will influence the tiles state in a predictible fasion, to be read later in rendering.
 
 Give each face of a tile a "binary number" as such:
 
-![auto tilling image](/src/pages/tutorials/auto-tilling/binary.svg)
+![auto tilling image](/tutorials/auto-tilling/binary.svg)
 
 For every tile, loop over the neighbouring tiles and check to see whether they are occupied. If they are, add that direction's corrosponding binary number to the tile's state value. This creates a unique identifying number for every possible state a tile could be in!
 
@@ -35,4 +35,4 @@ return tile.state
 
 Now, you should be able to easily compute which sprite to select when drawing your tile!
 
-![auto tilling image](/src/pages/tutorials/auto-tilling/tiles.svg)
+![auto tilling image](/tutorials/auto-tilling/tiles.svg)

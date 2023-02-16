@@ -5,6 +5,8 @@ import './App.css'
 import Header from './Header'
 import ProjectList from './pages/ProjectList'
 import Home from './pages/Home'
+import NotFound from './pages/404';
+import Tutorials from './pages/TutorialList';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -18,6 +20,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/projects" element={<ProjectList />} />
         <Route path="/dot32" element={<Home />} />
+        {/* <Route path="/tutorials" element={<Tutorials />} /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </div>
   )

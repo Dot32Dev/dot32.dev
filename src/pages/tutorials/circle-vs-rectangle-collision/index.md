@@ -1,7 +1,7 @@
 # Circle VS Rectangle Collision
 This written tutorial will show you how to detect interception between circles and rectangles, and then resolve them with basic maths.
 
-![thumbnail gif](/tutorials/circle-vs-rectangle-collision/thumb.gif)
+![thumbnail gif](/src/pages/tutorials/circle-vs-rectangle-collision/thumb.gif)
 
 You may already know that to detect interception between a circle and a point, all we need is to calculate the distance from the point to the centre of the circle. If the distance is less than the radius, then the point has to be within the circle.
 This actually means that the only information we need to find for this collision detection is the closest point on the rectangle to the circle. This will give us the direct distance to measure against the radius.
@@ -86,14 +86,3 @@ This particular resolution algorythm suits a top down game in which the player i
 When all else fails, you could always google point versus circle collision resolution.
 
 Happy coding!
-
-<div id="json">
-  {
-    "author": "Dot32",
-    "date": "18th Jan 2021",
-    "edited": "2nd Feb 2022",
-    "title": "Circle VS rectangle collision detection",
-    "description": "This written tutorial will show you how to detect interception between circles and rectangles.",
-    "image": "/tutorials/circle-vs-rectangle-collision/thumb.gif"
-  }
-</div>

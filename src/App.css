@@ -110,3 +110,7 @@ header a:hover {
 video {
   max-width: 600px;
 }
+
+.projectList {
+  max-width: 1100px;
+}

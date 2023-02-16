@@ -7,7 +7,7 @@ export default function Tutorial(props) {
 	const [markdown, setMarkdown] = useState("");
 
 	useEffect(() => {
-		fetch(`/src/pages/tutorials/${id}.md`) 
+		fetch(`/src/pages/tutorials/${id}/index.md`) 
 			.then((res) => res.text())
 			.then((text) => setMarkdown(text));
 	}, []);

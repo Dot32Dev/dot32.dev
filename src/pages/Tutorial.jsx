@@ -1,3 +1,4 @@
+import useDocumentTitle from './useDocumentTitle'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
@@ -8,6 +9,9 @@ import hljs from "highlight.js";
 export default function Tutorial(props) {
 	const { id } = useParams()
 	const [markdown, setMarkdown] = useState("");
+
+	// Set title to contents of first h1
+	useDocumentTitle(markdown.split("\n")[0].replace("# ", ""))
 
 	useEffect(() => {
 		fetch(`/tutorials/${id}/index.md`) 

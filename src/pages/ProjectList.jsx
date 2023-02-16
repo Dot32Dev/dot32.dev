@@ -1,12 +1,14 @@
+import useDocumentTitle from './useDocumentTitle'
 import Project from '../Project'
 
 export default function ProjectList(props) {
+	useDocumentTitle('Projects')
 	return (
 		<div className="projectList">
 			<br/>
 			<br/>
 			<br/>
-			
+
 			<h2>Featured</h2>
 
 			<Project

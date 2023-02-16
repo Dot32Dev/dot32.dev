@@ -1,6 +1,8 @@
+import useDocumentTitle from './useDocumentTitle'
 import Project from '../Project'
 
 export default function TutorialList(props) {
+	useDocumentTitle('Tutorials')
 	return (
 		<div className="projectList">
 			<br/>

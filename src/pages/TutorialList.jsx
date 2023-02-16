@@ -10,19 +10,19 @@ export default function TutorialList(props) {
 			{/* <h2>Featured</h2> */}
 
 			<Project
-			name="Discord Timestamp Generator"
-			link="https://discordtimestampgenerator.netlify.app/"
-			image="https://cdn.discordapp.com/attachments/577832597686583310/918749004714639400/Screen_Shot_2021-12-10_at_14.20.21.png"
-			tags="Website"
-			description="Generate relative timestamps that you can paste into Discord chat"
+			name="Circle versus rectangle collision"
+			link="/tutorials/circle-vs-rectangle-collision"
+			image="https://dot32.dev/tutorials/circle-vs-rectangle-collision/thumb.gif"
+			tags="Lua"
+			description="How to detect interception between circles and rectangles."
 			/>
 
 			<Project
-			name="Tiny Tank"
-			link="https://dot32.itch.io/tiny-tank"
-			image="https://dot32.dev/projects/tinytankthumb.png"
-			tags="Windows, MacOS"
-			description="Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!"
+			name="How to build custom auto tilling"
+			link="/tutorials/auto-tilling"
+			image="https://dot32.dev/tutorials/auto-tilling/thumb.gif"
+			tags="Lua"
+			description="It's not as hard as you might think!"
 			/>
 			
 		</div>

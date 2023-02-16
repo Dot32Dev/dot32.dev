@@ -121,4 +121,20 @@ img {
 
 p {
   font-size: 1.3em;
+  line-height: 1.68;
+}
+
+code {
+  font-size: 1.3em;
+}
+
+:not(pre) > code {
+  font-size: 1.3em;
+  color: orange;
+  white-space: nowrap
+}
+
+.hljs {
+  border-radius: 12px;
+  background-color: hsl(295, 13%, 10%) !important;
 }

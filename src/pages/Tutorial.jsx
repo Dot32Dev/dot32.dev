@@ -2,6 +2,8 @@ import useDocumentTitle from './useDocumentTitle'
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
+// import html from 'remark-html'
+import rehypeRaw from 'rehype-raw'
 
 import "highlight.js/styles/atom-one-dark.css";
 import hljs from "highlight.js";
@@ -29,7 +31,7 @@ export default function Tutorial(props) {
 			<br/>
 			<br/>
 			
-			<ReactMarkdown>{markdown}</ReactMarkdown>
+			<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
 		</div>
 	)
 }

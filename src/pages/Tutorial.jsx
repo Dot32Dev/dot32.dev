@@ -19,7 +19,7 @@ export default function Tutorial(props) {
 	}, []);
 
 	return (
-		<div className="projectList">
+		<div className="tutorial">
 			<br/>
 			<br/>
 			<br/>

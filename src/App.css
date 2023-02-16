@@ -115,11 +115,7 @@ video {
   max-width: 1100px;
 }
 
-img {
-  max-height: 450px;
-}
-
-p {
+:not(header > nav > ul > li > a) > p {
   font-size: 1.3em;
   line-height: 1.68;
 }
@@ -131,10 +127,26 @@ code {
 :not(pre) > code {
   font-size: 1.3em;
   color: orange;
-  white-space: nowrap
+  white-space: nowrap;
+  background-color: hsl(295, 13%, 10%);
 }
 
 .hljs {
   border-radius: 12px;
   background-color: hsl(295, 13%, 10%) !important;
+}
+
+.tutorial {
+  max-width: 680px;
+}
+
+.tutorial img {
+  width: 100%;
+}
+
+.tutorial h2 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  text-align: center;
+  color: #605853;
 }

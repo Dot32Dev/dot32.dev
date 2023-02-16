@@ -1,5 +1,5 @@
 # Basic Auto Tilling
-Build your own auto tilling implementation
+Build your own auto tilling implementation!
 
 ![auto tilling thumbnail](/src/pages/tutorials/auto-tilling/thumb.gif)
 

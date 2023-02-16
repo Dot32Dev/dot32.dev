@@ -15,6 +15,7 @@ export default function Tutorial(props) {
 			.then((text) => {
 				setMarkdown(text);
 				hljs.highlightAll();
+				console.log("highlighted")
 			});
 	}, []);
 

@@ -5,11 +5,8 @@ export default function TutorialList(props) {
 	useDocumentTitle('Tutorials')
 	return (
 		<div className="projectList">
-			<br/>
-			<br/>
-			<br/>
 			
-			{/* <h2>Featured</h2> */}
+			<h1>Tutorials</h1>
 
 			<Project
 			name="Circle versus rectangle collision"

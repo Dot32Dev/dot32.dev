@@ -62,8 +62,8 @@ nav {
 	height: 30px;
 }
 
-ul {
-	list-style-type: none;
+nav ul {
+	/* list-style-type: none; */
 	height: 100%;
 }
 
@@ -116,7 +116,7 @@ video {
   max-width: 1100px;
 }
 
-:not(header > nav > ul > li > a) > p {
+:not(header > nav > ul > li > a) > p, :not(header > nav) > ul {
   font-size: 1.3em;
   line-height: 1.68;
 }
@@ -150,4 +150,8 @@ code {
   line-height: 1.1;
   text-align: center;
   color: #605853;
+}
+
+.tutorial ul {
+  list-style-type: circle;
 }

@@ -17,13 +17,19 @@ export default function Tutorial(props) {
 
 	useEffect(() => {
 		fetch(`/tutorials/${id}/index.md`) 
-			.then((res) => res.text())
-			.then((text) => {
-				setMarkdown(text);
-				hljs.highlightAll();
-				console.log("highlighted")
-			});
+		.then((res) => res.text())
+		.then((text) => {
+			setMarkdown(text);
+			console.log("markdown fetch")
+		});
 	}, []);
+		
+	useEffect(() => {
+		hljs.highlightAll();
+		console.log("highlighted")
+	});
+
+
 
 	return (
 		<div className="tutorial">

@@ -11,7 +11,7 @@ export default function Project() {
 					<li><a href="">Projects</a></li>
 					<li><a href="">Tutorials</a></li>
 					<li><a href="">About</a></li> */}
-					<li><Link to="/"><img src="https://resonant-pastelito-dc9a23.netlify.app/white%20logo.png" style={{display: 'inline', margin: 0,width: '1em'}}/><p>Dot32</p></Link></li>
+					<li><Link to="/"><img src="/white logo.png" style={{display: 'inline', margin: 0,width: '1em'}}/><p>Dot32</p></Link></li>
 					<li><Link to="/projects">Projects</Link></li>
 					<li><Link to="/tutorials">Tutorials</Link></li>
 					<li><Link to="/about">About</Link></li>

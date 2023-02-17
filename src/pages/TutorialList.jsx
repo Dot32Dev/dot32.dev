@@ -14,7 +14,7 @@ export default function TutorialList(props) {
 			<Project
 			name="Circle versus rectangle collision"
 			link="/tutorials/circle-vs-rectangle-collision"
-			image="https://dot32.dev/tutorials/circle-vs-rectangle-collision/thumb.gif"
+			image="/tutorials/circle-vs-rectangle-collision/thumb.gif"
 			tags="Lua"
 			description="How to detect interception between circles and rectangles."
 			/>
@@ -22,7 +22,7 @@ export default function TutorialList(props) {
 			<Project
 			name="How to build custom auto tilling"
 			link="/tutorials/auto-tilling"
-			image="https://dot32.dev/tutorials/auto-tilling/thumb.gif"
+			image="/tutorials/auto-tilling/thumb.gif"
 			tags="Lua"
 			description="It's not as hard as you might think!"
 			/>

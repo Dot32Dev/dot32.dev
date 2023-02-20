@@ -181,7 +181,7 @@ export default function ProjectList(props) {
 			description="Contrary to the name, most people take a while to finish, due to he janky af controls. Nevertheless, this game has speedrunning potential"
 			/>  
 
-			<p> Also see my <a href="github.com/Dot32IsCool">Github</a> for more projects </p>
+			<p> Also see my <a href="https://github.com/Dot32IsCool">Github</a> for more projects </p>
 		</div>
 	)
 }

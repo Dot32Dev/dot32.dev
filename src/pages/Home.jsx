@@ -16,9 +16,11 @@ export default function ProjectList(props) {
 
 	return (
 		<div className="projectList">
+			<p className="large-text">Hi there, I'm <span>Dot32</span></p>
 			<video autoPlay muted playsInline loop ref={ref}>
 				<source src="/gradientlogo.webm" />
 			</video>
+			<p className="large-text sub"><span>[ RUSTACIAN + WEBDEV ]</span></p>
 		</div>
 	)
 }

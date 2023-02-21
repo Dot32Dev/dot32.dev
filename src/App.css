@@ -166,3 +166,17 @@ video.animate {
 	from {transform: scale(0.7);}
 	to {transform: scale(1);}
 }
+
+.large-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  gap: 0.5rem;
+  font-size: 40px;
+  font-family: Sen;
+}
+
+.large-text.sub {
+  font-size: 20px;
+} 

@@ -110,6 +110,7 @@ header a:hover {
 video {
   width: 100%;
   max-width: 650px;
+  transform: scale(0.7)
 }
 
 .projectList {
@@ -158,6 +159,7 @@ code {
 
 video.animate {
   animation: scale-centre 0.3s ease-out 1;
+  animation-fill-mode: forwards;
 }
 
 @keyframes scale-centre {

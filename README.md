@@ -1,5 +1,8 @@
-# react_projects_list
+# dot32.dev-v5
 
-<img width="1722" alt="Screenshot 2023-02-04 at 23 39 25" src="https://user-images.githubusercontent.com/61964090/216776253-517333fa-89dc-4fdd-a526-257c2a1e2fe0.png">
+<img width="1720" alt="Screenshot 2023-02-22 at 16 55 52" src="https://user-images.githubusercontent.com/61964090/220570901-5d87398a-5e2d-407f-bbf4-0ed66f1e3ce9.png">
 
-This is fast turning into a remake of my entire website
+
+I'm remaking my website, and learning React as I do it 🚀
+
+

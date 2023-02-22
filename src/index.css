@@ -18,11 +18,17 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-text-size-adjust: 100%;
+
+  --brand-colour: #1e90ff;
 }
 
 a {
   /* font-weight: 500; */
-  color: #646cff;
+  /* color: #646cff; */
+  /* color: #5ebbc3; */
+  /* color: #8459ed; */
+  /* color: #edb259; */
+  color: var(--brand-colour);
   /* color: hsl(23, 60%, 55%); */
   text-decoration: inherit;
 }

@@ -25,7 +25,7 @@ export default function ProjectList(props) {
 	}, []);
 
 	return (
-		<div className="projectList">
+		<div className="home">
 			<p className="large-text top" ref={(el) => (animate.current[0] = el)}>Hi there, I'm <span>Dot32</span></p>
 			<div className="video-container" ref={vid}>
 				<video autoPlay muted playsInline loop>

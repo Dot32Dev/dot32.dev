@@ -1,8 +1,10 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  /* max-width: 1280px; */
+  /* margin: 0 auto; */
+  /* padding: 2rem; */
   /* text-align: center; */
+  margin: 0;
+  padding: 0;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -113,6 +115,8 @@ video {
 
 .projectList {
   max-width: 1100px;
+  margin: 0 auto;
+  max-width: 750px;
 }
 
 :not(header > nav > ul > li > a) > p, :not(header > nav) > ul {
@@ -138,6 +142,7 @@ code {
 
 .tutorial {
   max-width: 680px;
+  margin: 0 auto;
 }
 
 .tutorial img {
@@ -213,3 +218,19 @@ code {
   from {transform: translateY(40px); opacity: 0;}
   to {transform: translateY(0); opacity: 1;}
 }
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* .home::before {
+  content: "";
+  position: absolute;
+  background-color: black;
+  inset: 0;
+} */

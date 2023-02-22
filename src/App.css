@@ -175,19 +175,23 @@ code {
 }
 
 .large-text {
+  font-family: Sen;
+  margin: 0;
+  opacity: 0;
+}
+
+.large-text.top {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem 0;
   gap: 0.5rem;
   font-size: 40px;
-  font-family: Sen;
-  margin: 0;
-  opacity: 0;
 }
 
 .large-text.sub {
   font-size: 20px;
+  text-align: center;
 } 
 
 .large-text.sub.animate {
@@ -200,12 +204,12 @@ code {
 	to {transform: translateY(0); opacity: 1;}
 }
 
-.large-text.animate {
-  animation: fade-in 0.3s ease-out 0.2s 1;
+.large-text.top.animate {
+  animation: top-fade-in 0.3s ease-out 0.2s 1;
   animation-fill-mode: forwards;
 }
 
-@keyframes fade-in {
+@keyframes top-fade-in {
   from {transform: translateY(40px); opacity: 0;}
   to {transform: translateY(0); opacity: 1;}
 }

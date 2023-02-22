@@ -32,13 +32,13 @@ function circleVsRectangle(circle, rectangle)
 
   return ((circle.y-py)^2 + (circle.x-px)^2) < circle.r^2
   -- simply check the distance from the clamped px/py versus the circle
-  -- optimised length formula that removes sqrt by compairing with radius^2
+  -- optimised length formula removes sqrt by compairing with radius^2
 end
 ```
 For reference, the circle is in the format of `{x =, y =, r =}`, and the rectangle is in the format of `{x =, y =, w =, h =}`
 
-`x` is the position of the circle on the x axis <br>
-`y` is the position of the circle on the y axis <br>
+`x` is the position on the x axis <br>
+`y` is the position on the y axis <br>
 `r` is radius <br>
 `w` is width <br>
 `h` is height <br>
@@ -49,7 +49,8 @@ Resolving collisions will be different in every use case, as every project has d
 The first change we will make will be to also return the location of the point when intercepting
 
 ```lua
-return (((circle.y-py)^2 + (circle.x-px)^2) < circle.r^2), {x = px, y = py} -- notice the table I added, seperated by a comma!
+return (((circle.y-py)^2 + (circle.x-px)^2) < circle.r^2), {x = px, y = py} 
+-- notice the table I added, seperated by a comma!
 ```
 In Lua, when returning two values (seperated by the comma), accessing the second one is done like such
 ```lua
@@ -60,9 +61,9 @@ we can then use `bool` in an if statement to detect collision and `point` to tel
 The actual resolution is done as such:
 - get offset from circle to point
 - get the distance by getting the "length" of the offset vector
-- create a "direction" vector from dividing the x/y of the offset by the distance
+- create a "direction" vector by dividing the x/y of the offset by the distance
 - calculate how far the player will have to travel along the direction vector by subtracting the "distance" from the circle radius
-- actually move the player by the calculated amount in the direction of the direction vector
+- actually move the player by the calculated amount, in the direction of the direction vector
 
 Try to understand what this is doing and how it works before copying the code below: 
 ```lua
@@ -70,10 +71,10 @@ Try to understand what this is doing and how it works before copying the code be
 local bool, point = circleVsRectangle(circle, rect)
 
 if bool then
-  local offset = {x = circle.x - point.x, y = circle.y - point.y}
+  local offset = {x = circle.x - point.x, y = circle.y - point.y} -- the difference between the two points
   local distance = math.sqrt(offset.x^2 + offset.y^2) -- pythatgoras babyy
   local direction = {x = offset.x/distance, y = offset.y/distance} -- direction stored as a normalised vector
-  local moveLen = circle.r - distance
+  local moveLen = circle.r - distance -- see how far in the circle is to the rectangle
 
   circle.x = circle.x + moveLen*direction.x
   circle.y = circle.y + moveLen*direction.y
@@ -86,3 +87,5 @@ This particular resolution algorythm suits a top down game in which the player i
 When all else fails, you could always google point versus circle collision resolution.
 
 Happy coding!
+
+<span style="text-align: center;display: block;">Published 18th Jan 2021, last updated 22nd Feb 2023</span>

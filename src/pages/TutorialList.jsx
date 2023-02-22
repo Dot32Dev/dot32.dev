@@ -5,6 +5,9 @@ export default function TutorialList(props) {
 	useDocumentTitle('Tutorials')
 	return (
 		<div className="projectList">
+			<br/>
+			<br/>
+			<br/>
 			
 			<h1>Tutorials</h1>
 

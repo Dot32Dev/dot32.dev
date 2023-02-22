@@ -34,7 +34,14 @@ export default function ProjectList(props) {
 			</div>
 			<br/>
 			<br/>
+			<br/>
 			<p className="large-text sub" ref={(el) => (animate.current[1] = el)}><span>[ RUSTACIAN + WEBDEV ]</span></p>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
+			<br/>
 		</div>
 	)
 }

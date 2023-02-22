@@ -76,6 +76,8 @@ nav li, nav p {
 
 span {
 	color: rgb(142, 162, 200);
+  /* color: #5865F2; */
+  /* color: #cb6f2d; */
 }
 
 header a {
@@ -111,6 +113,7 @@ header a:hover {
 
 video {
   width: 100%;
+  /* filter: hue-rotate(300deg); */
 }
 
 .projectList {
@@ -161,7 +164,7 @@ code {
 }
 
 .video-container {
-  max-width: 650px;
+  max-width: 630px;
   transform: scale(0.7);
   height: 100px;
   display: flex;
@@ -190,8 +193,9 @@ code {
   justify-content: center;
   align-items: center;
   padding: 1rem 0;
-  gap: 0.5rem;
+  gap: 0.7rem;
   font-size: 40px;
+  color: white;
 }
 
 .large-text.sub {
@@ -232,7 +236,9 @@ code {
   content: "";
   position: absolute;
   /* background-color: black; */
-  background-image: linear-gradient(17deg, #101529, black, black, black);
+  /* background-image: linear-gradient(17deg, #101529, black, black, black); */
+  /* background-image: linear-gradient(17deg, hsl(235, 86%, 7%), black, black, black); */
+  /* background-image: linear-gradient(17deg, hsl(0, 100%, 9%), black, black, black); */
   /* background-image: linear-gradient(17deg, #101529, #00000000, #10152978, #102429); */
   /* background-image: linear-gradient(157deg, #0b0a1b, #00000000, #00000000); */
   inset: 0;

@@ -109,8 +109,6 @@ header a:hover {
 
 video {
   width: 100%;
-  max-width: 650px;
-  transform: scale(0.7)
 }
 
 .projectList {
@@ -157,7 +155,16 @@ code {
   list-style-type: disc;
 }
 
-video.animate {
+.video-container {
+  max-width: 650px;
+  transform: scale(0.7);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container.animate {
   animation: scale-centre 0.3s ease-out 1;
   animation-fill-mode: forwards;
 }
@@ -175,6 +182,7 @@ video.animate {
   gap: 0.5rem;
   font-size: 40px;
   font-family: Sen;
+  margin: 0;
 }
 
 .large-text.sub {

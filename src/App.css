@@ -190,12 +190,22 @@ code {
   font-size: 20px;
 } 
 
+.large-text.sub.animate {
+  animation: sub-fade-in 0.2s ease-out 0.5s 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes sub-fade-in {
+  from {transform: translateY(-20px); opacity: 0;}
+	to {transform: translateY(0); opacity: 1;}
+}
+
 .large-text.animate {
-  animation: fade-in 0.3s ease-out 1;
+  animation: fade-in 0.3s ease-out 0.2s 1;
   animation-fill-mode: forwards;
 }
 
 @keyframes fade-in {
-  from {opacity: 0;}
-  to {opacity: 1;}
+  from {transform: translateY(20px); opacity: 0;}
+  to {transform: translateY(0); opacity: 1;}
 }

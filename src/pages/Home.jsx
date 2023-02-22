@@ -2,31 +2,39 @@ import useDocumentTitle from './useDocumentTitle'
 import {useRef, useEffect} from 'react';
 
 export default function ProjectList(props) {
-	const ref = useRef(null);
 	useDocumentTitle('Dot32')
+	
+	const vid = useRef(null);
+	const animate = useRef([]);
 
 	useEffect(() => {
 		// Get the video-container element
-		const video_container = ref.current;
+		const video_container = vid.current;
 		// Get the video element
 		const video = video_container.querySelector("video");
-		// Add a class to the video-container when it is loaded
+		// Get the elements marked for animation
+		const elements = animate.current;
+		console.log(elements);
+		// When the video is loaded, add the animate class to the video container and the elements marked for animation
 		video.onloadeddata = function() { // first frame has loaded
 			video_container.classList.add("animate");
+			elements.forEach(element => {
+				element.classList.add("animate");
+			});
 		}
 	}, []);
 
 	return (
 		<div className="projectList">
-			<p className="large-text">Hi there, I'm <span>Dot32</span></p>
-			<div className="video-container" ref={ref}>
+			<p className="large-text" ref={(el) => (animate.current[0] = el)}>Hi there, I'm <span>Dot32</span></p>
+			<div className="video-container" ref={vid}>
 				<video autoPlay muted playsInline loop>
 					<source src="/gradientlogo.webm" />
 				</video>
 			</div>
 			<br/>
 			<br/>
-			<p className="large-text sub"><span>[ RUSTACIAN + WEBDEV ]</span></p>
+			<p className="large-text sub" ref={(el) => (animate.current[1] = el)}><span>[ RUSTACIAN + WEBDEV ]</span></p>
 		</div>
 	)
 }

@@ -183,8 +183,19 @@ code {
   font-size: 40px;
   font-family: Sen;
   margin: 0;
+  opacity: 0;
 }
 
 .large-text.sub {
   font-size: 20px;
 } 
+
+.large-text.animate {
+  animation: fade-in 0.3s ease-out 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fade-in {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}

@@ -27,7 +27,15 @@ export default function ProjectList(props) {
 			description="Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!"
 			/>
 
-			<h2>Recent <span>(Last updated 6th Feb 2023)</span></h2>
+			<h2>Recent <span>(Last updated 8th Mar 2023)</span></h2>
+
+			<Project
+			name="Rodio Synthesizer"
+			link="https://github.com/Dot32IsCool/rodio-synth"
+			image="https://cdn.discordapp.com/attachments/577832597686583310/1082999567689187368/Screenshot_2023-03-08_at_20.13.16.png"
+			tags="Requires Rust compiler and a MIDI keyboard"
+			description="A synthesizer written in Rust using the Rodio library, supporting envelopes and polyphony."
+			/>
 
 			<Project
 			name="Discord Timezone Generator"

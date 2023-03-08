@@ -38,6 +38,10 @@ export default function Tutorial(props) {
 			<br/>
 			
 			<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
+
+			{/* <hr/>
+
+			<p>Have any questions? Join the <a className="cta" href="https://discord.gg/Pswb8khdgQ">Discord server</a></p> */}
 		</div>
 	)
 }

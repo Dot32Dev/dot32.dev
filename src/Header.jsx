@@ -13,7 +13,7 @@ export default function Project() {
 					{/* <li><Link to="/about">About</Link></li> */}
 				</ul>
 			</nav>
-			<a href="" className="cta">Join my Discord</a>
+			<a href="https://discord.gg/Pswb8khdgQ" className="cta">Join my Discord</a>
 		</header>
 	</div>
 	)

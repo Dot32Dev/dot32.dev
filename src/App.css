@@ -266,3 +266,6 @@ code {
   to {opacity: 1;}
 }
 
+hr {
+  border-bottom: 1px solid #282c34;
+}

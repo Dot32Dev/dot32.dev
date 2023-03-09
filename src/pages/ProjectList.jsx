@@ -27,7 +27,15 @@ export default function ProjectList(props) {
 			description="Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!"
 			/>
 
-			<h2>Recent <span>(Last updated 8th Mar 2023)</span></h2>
+			<h2>Recent <span>(Last updated 9th Mar 2023)</span></h2>
+
+			<Project
+			name="Ui Synthesizer"
+			link="https://github.com/Dot32IsCool/ui_synth"
+			image="https://cdn.discordapp.com/attachments/577832597686583310/1083250562373533696/Screenshot_2023-03-09_at_12.50.46.png"
+			tags="Requires Rust compiler"
+			description="A UI for my Rodio Synthesizer - MIDI keyboard not required!"
+			/>
 
 			<Project
 			name="Rodio Synthesizer"

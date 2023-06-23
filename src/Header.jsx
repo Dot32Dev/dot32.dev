@@ -2,6 +2,8 @@
 import { Link } from 'react-router-dom'
 import { useNavigate} from 'react-router-dom';
 
+const pages = ["/", "/projects", "/tutorials", "/about"];
+
 export default function Project() {
 	return (
 		<div className="header-container">
@@ -26,15 +28,37 @@ const AnimatedLink = ({ to, children }) => {
 	return (
 	  <a
 		href={to}
-		onClick={(ev) => {
+		onClick={async (ev) => {
 		  ev.preventDefault();
 		//   document.startViewTransition(() => {
 		// 	navigate(to);
 		//   });
 			if (document.startViewTransition) {
-				document.startViewTransition(() => {
+				// Check if the page is in the list of pages and if it is record the index
+				const index = pages.indexOf(to);
+				// If the page is in the list of pages
+				if (index !== -1) {
+					// Get currently active page from the list of pages and if it is record the index
+					const activeIndex = pages.indexOf(window.location.pathname);
+					// If the active page is in the list of pages
+					if (activeIndex !== -1) {
+						// If the active page index is greater than the page index
+						if (activeIndex > index) {
+							// Make the page slide in from the left
+							document.documentElement.classList.add('back-transition');
+						}
+					}
+				}
+				// Start the transition
+				const transition = document.startViewTransition(() => {
 					navigate(to);
 				});
+
+				try {
+					await transition.finished;
+				  } finally {
+					document.documentElement.classList.remove('back-transition');
+				  }
 			} else {
 				navigate(to);
 			}

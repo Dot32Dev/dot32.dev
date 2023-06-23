@@ -28,9 +28,16 @@ const AnimatedLink = ({ to, children }) => {
 		href={to}
 		onClick={(ev) => {
 		  ev.preventDefault();
-		  document.startViewTransition(() => {
-			navigate(to);
-		  });
+		//   document.startViewTransition(() => {
+		// 	navigate(to);
+		//   });
+			if (document.startViewTransition) {
+				document.startViewTransition(() => {
+					navigate(to);
+				});
+			} else {
+				navigate(to);
+			}
 		}}
 	  >
 		{children}

@@ -1,5 +1,6 @@
 import './Project.css'
 import { Link } from 'react-router-dom'
+import { useNavigate} from 'react-router-dom';
 
 export default function Project(props) {
 	// if props.link is external
@@ -21,13 +22,13 @@ export default function Project(props) {
 	} else {
 		return (
 			<div className="project">
-				<Link to={props.link}>
+				<AnimatedLink to={props.link}>
 					<img src={props.image}/>
-				</Link>
+				</AnimatedLink>
 				<div>
-					<Link to={props.link}>
+					<AnimatedLink to={props.link}>
 						<h2>{props.name} <span className="fas fa-external-link-alt"/></h2>
-					</Link>
+					</AnimatedLink>
 					<span className="tag">{props.tags}</span>
 					<p>{props.description}</p>
 				</div>
@@ -35,3 +36,25 @@ export default function Project(props) {
 		)
 	}
 }
+
+const AnimatedLink = ({ to, children }) => {
+	const navigate = useNavigate();
+  
+	return (
+	  <a
+		href={to}
+		onClick={(ev) => {
+		  ev.preventDefault();
+			if (document.startViewTransition) {
+				document.startViewTransition(() => {
+					navigate(to);
+				});
+			} else {
+				navigate(to);
+			}
+		}}
+	  >
+		{children}
+	  </a>
+	);
+  };

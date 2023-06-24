@@ -5,6 +5,7 @@
   /* text-align: center; */
   margin: 0;
   padding: 0;
+  padding-left: calc(100vw - 100%);
 }
 
 @media (prefers-reduced-motion: no-preference) {

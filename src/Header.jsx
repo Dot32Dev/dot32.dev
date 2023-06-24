@@ -47,18 +47,21 @@ const AnimatedLink = ({ to, children }) => {
 							// Make the page slide in from the left
 							document.documentElement.classList.add('back-transition');
 						}
+
+						if (activeIndex !== index) {
+							// Start the transition
+							const transition = document.startViewTransition(() => {
+								navigate(to);
+							});
+
+							try {
+								await transition.finished;
+							} finally {
+								document.documentElement.classList.remove('back-transition');
+							}
+						}
 					}
 				}
-				// Start the transition
-				const transition = document.startViewTransition(() => {
-					navigate(to);
-				});
-
-				try {
-					await transition.finished;
-				  } finally {
-					document.documentElement.classList.remove('back-transition');
-				  }
 			} else {
 				navigate(to);
 			}

@@ -31,7 +31,7 @@ h2 span {
 
 .header-container {
 	position: fixed;
-	width: 100%;
+	/* width: 100%; */
 	box-sizing: border-box;
 	z-index: 1;
   /* max-width: 1280px; */

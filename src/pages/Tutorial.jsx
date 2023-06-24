@@ -11,6 +11,7 @@ import hljs from "highlight.js";
 export default function Tutorial(props) {
 	const { id } = useParams()
 	const [markdown, setMarkdown] = useState("");
+	const isReady = markdown !== "";
 
 	// Set title to contents of first h1
 	useDocumentTitle(markdown.split("\n")[0].replace("# ", ""))
@@ -37,7 +38,12 @@ export default function Tutorial(props) {
 			<br/>
 			<br/>
 			
-			<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
+			{/* <ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown> */}
+			{isReady ? (
+                    <ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
+                ) : (
+					<img src="//tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." />
+                )}
 
 			{/* <hr/>
 

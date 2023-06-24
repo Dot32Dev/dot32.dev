@@ -161,6 +161,10 @@ code {
   width: 100%;
 }
 
+.tutorial img[src*="gif"] {
+  view-transition-name: thumbnail_gif;
+}
+
 .tutorial h2 {
   font-size: 2.5em;
   line-height: 1.1;

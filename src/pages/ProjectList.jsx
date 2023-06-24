@@ -12,6 +12,14 @@ export default function ProjectList(props) {
 			<h2>Featured</h2>
 
 			<Project
+			name="This Website"
+			link="https://github.com/Dot32IsCool/dot32.dev-v5"
+			image="https://cdn.discordapp.com/attachments/577832597686583310/1122004199589294120/Screenshot_2023-06-24_at_11.23.44.png"
+			tags="Website"
+			description="Star it on GitHub!"
+			/>
+
+			<Project
 			name="Discord Timestamp Generator"
 			link="https://discordtimestampgenerator.netlify.app/"
 			image="https://cdn.discordapp.com/attachments/577832597686583310/918749004714639400/Screen_Shot_2021-12-10_at_14.20.21.png"

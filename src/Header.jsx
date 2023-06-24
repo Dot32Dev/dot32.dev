@@ -60,6 +60,8 @@ const AnimatedLink = ({ to, children }) => {
 								document.documentElement.classList.remove('back-transition');
 							}
 						}
+					} else {
+						navigate(to);
 					}
 				}
 			} else {

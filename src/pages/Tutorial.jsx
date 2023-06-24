@@ -42,7 +42,7 @@ export default function Tutorial(props) {
 			{isReady ? (
                     <ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
                 ) : (
-					<img src="//tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." />
+					<img src="/tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." className='thumbgif' />
                 )}
 
 			{/* <hr/>

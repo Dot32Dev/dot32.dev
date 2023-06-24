@@ -202,7 +202,7 @@ export default function ProjectList(props) {
 			link="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game"
 			image="https://dot32.dev/projects/q&spthumb.png"
 			tags="Windows, MacOS"
-			description="Contrary to the name, most people take a while to finish, due to he janky af controls. Nevertheless, this game has speedrunning potential"
+			description="Contrary to the name, most people take a while to finish due to the janky physics. Nevertheless, this game has speedrunning potential"
 			/>  
 
 			<p> Also see my <a href="https://github.com/Dot32IsCool">Github</a> for more projects </p>

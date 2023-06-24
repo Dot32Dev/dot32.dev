@@ -35,10 +35,10 @@ h2 span {
 	box-sizing: border-box;
 	z-index: 1;
   /* max-width: 1280px; */
-  left: 0;
+  left: calc(100vw - 100%);
   right: 0;
   top: 0;
-  padding-left: calc(100vw - 100%);
+  /* padding-left: ; */
 }
 
 /* .content {

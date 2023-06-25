@@ -46,21 +46,21 @@ const AnimatedLink = ({ to, children }) => {
 		onClick={(ev) => {
 		  ev.preventDefault();
 			if (document.startViewTransition) {
-				// ev.target.viewTransitionName = 'thumbnail_gif';
-				// Find the parent "project" div
-				const parent = ev.currentTarget.closest('.project');
-				// Find the image
-				const image = parent.querySelector('img');
-				// If the image exists
-				if (image) {
-					// Set the view transition name
-					image.style.viewTransitionName = 'thumbnail_gif';
-				}
+				// // ev.target.viewTransitionName = 'thumbnail_gif';
+				// // Find the parent "project" div
+				// const parent = ev.currentTarget.closest('.project');
+				// // Find the image
+				// const image = parent.querySelector('img');
+				// // If the image exists
+				// if (image) {
+				// 	// Set the view transition name
+				// 	image.style.viewTransitionName = 'thumbnail_gif';
+				// }
 
 				document.startViewTransition(() => {
-					if (image) {
-						image.style.viewTransitionName = '';
-					}
+					// if (image) {
+					// 	image.style.viewTransitionName = '';
+					// }
 					navigate(to);
 				});
 			} else {

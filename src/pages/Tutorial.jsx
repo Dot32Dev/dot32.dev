@@ -38,12 +38,13 @@ export default function Tutorial(props) {
 			<br/>
 			<br/>
 			
-			{/* <ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown> */}
-			{isReady ? (
-                    <ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
-                ) : (
-					<img src="/tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." className='thumbgif' />
-                )}
+			<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
+			{/* {isReady ? (
+				<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
+			) : (
+				<img src="/tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." className='thumbgif' />
+			)} */}
+			{/* <img src="/tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." className='thumbgif' /> */}
 
 			{/* <hr/>
 

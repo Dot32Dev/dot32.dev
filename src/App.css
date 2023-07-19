@@ -381,3 +381,17 @@ hr {
     animation-name: fade-in, slide-from-left;
   }
 }
+
+@media (max-width: 500px) {
+  .cta {
+    display: none;
+  }
+  nav {
+    height: fit-content;
+    margin: auto;
+  }
+
+  nav ul {
+    padding-left: 0;
+  }
+}

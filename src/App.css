@@ -417,4 +417,20 @@ hr {
   .large-text.top {
     padding: 0;
   }
+  h1 {
+    font-size: 2.5em !important;
+  }
+  .tutorial p {
+    padding: 0px 20px;
+    font-size: 1rem;
+  }
+  .tutorial p:has(img) {
+    padding: 0;
+  }
+  .tutorial pre {
+    margin: 20px;
+  }
+  .tutorial h1 {
+    padding: 0px 20px;
+  }
 }

@@ -433,4 +433,14 @@ hr {
   .tutorial h1 {
     padding: 0px 20px;
   }
+  .tutorial code {
+    font-size: 1rem !important;
+  }
+  .tutorial h2 {
+    font-size: 2.0rem !important;
+  }
+  .tutorial ul {
+    font-size: 1rem !important;
+    padding-right: 20px;
+  }
 }

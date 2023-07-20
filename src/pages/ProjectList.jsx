@@ -35,7 +35,23 @@ export default function ProjectList(props) {
 			description="Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!"
 			/>
 
-			<h2>Recent <span>(Last updated 9th Mar 2023)</span></h2>
+			<h2>Recent <span>(Last updated 20th Jul 2023)</span></h2>
+
+			{/* <Project
+			name="2D Planet Generator"
+			link="https://github.com/Dot32IsCool/planet_gen"
+			image="https://cdn.discordapp.com/attachments/577832597686583310/1131422964240363530/Screenshot_2023-07-20_at_11.10.49.png"
+			tags="Requires Rust compiler"
+			description="Built from my Marching Squares project"
+			/> */}
+			
+			<Project
+			name="Marching Squares"
+			link="https://github.com/Dot32IsCool/marching_squares"
+			image="https://cdn.discordapp.com/attachments/577832597686583310/1131421296320848033/Screenshot_2023-07-20_at_11.04.13.png"
+			tags="Requires Rust compiler"
+			description="Marching squares in Bevy, written in an afternoon"
+			/>
 
 			<Project
 			name="Ui Synthesizer"
@@ -45,18 +61,18 @@ export default function ProjectList(props) {
 			description="A UI for my Rodio Synthesizer - MIDI keyboard not required!"
 			/>
 
-			<Project
+			{/* <Project
 			name="Rodio Synthesizer"
 			link="https://github.com/Dot32IsCool/rodio-synth"
 			image="https://cdn.discordapp.com/attachments/577832597686583310/1082999567689187368/Screenshot_2023-03-08_at_20.13.16.png"
 			tags="Requires Rust compiler and a MIDI keyboard"
 			description="A synthesizer written in Rust using the Rodio library, supporting envelopes and polyphony."
-			/>
+			/> */}
 
 			<Project
 			name="Discord Timezone Generator"
 			link="https://discordtimezonegenerator.netlify.app/"
-			image="https://cdn.discordapp.com/attachments/577832597686583310/1072069099972206662/Screenshot_2023-02-06_at_16.19.36.png"
+			image="https://media.discordapp.net/attachments/577832597686583310/1131426943028432906/Screenshot_2023-07-20_at_11.26.38.png"
 			tags="Website"
 			description="Show your timezone in your Discord profile for others to see!"
 			/>
@@ -77,13 +93,13 @@ export default function ProjectList(props) {
 			description="The original timer bot, rewritten to use slash commands!"
 			/>
 
-			<Project
+			{/* <Project
 			name="Pullboy"
 			link="https://github.com/Dot32IsCool/pullboy"
 			image="https://cdn.discordapp.com/attachments/577832597686583310/1071378776824479754/Screenshot_2023-02-04_at_18.36.39.png"
 			tags="Shell script"
 			description="Automatically pulls changes and redeployes a Node project when a git repo is updated"
-			/>
+			/> */}
 
 			<Project
 			name="Draggable List"

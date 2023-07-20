@@ -394,4 +394,27 @@ hr {
   nav ul {
     padding-left: 0;
   }
+
+  .large-text.top {
+    display: block;
+  }
+  .project > div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 450px) { 
+  .large-text.top span {
+    display: none;
+  }
+  video {
+    /* width calc 100% plus 3em */
+    width: calc(100% + 4em);
+  }
+  .video-container {
+    overflow: hidden;
+  }
+  .large-text.top {
+    padding: 0;
+  }
 }

@@ -10,7 +10,7 @@ export default function Project() {
 		<header>
 			<nav>
 				<ul>
-					<li><AnimatedLink to="/"><img src="/white logo.png" style={{display: 'inline', margin: 0,width: '1em'}}/><p>Dot32</p></AnimatedLink></li>
+					<li><AnimatedLink to="/"><img src="/white logo.png" alt="home icon" style={{display: 'inline', margin: 0,width: '1em'}}/><p>Dot32</p></AnimatedLink></li>
 					<li><AnimatedLink to="/projects">Projects</AnimatedLink></li>
 					<li><AnimatedLink to="/tutorials">Tutorials</AnimatedLink></li>
 					{/* <li><Link to="/about">About</Link></li> */}

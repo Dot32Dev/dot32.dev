@@ -32,9 +32,9 @@ export default function ProjectList(props) {
 					<source src="/gradientlogo.webm" />
 				</video>
 			</div>
+			{/* <br/>
 			<br/>
-			<br/>
-			<br/>
+			<br/> */}
 			<p className="large-text sub" ref={(el) => (animate.current[1] = el)}><span>[ RUSTACIAN + WEBDEV ]</span></p>
 			<br/>
 			<br/>

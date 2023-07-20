@@ -221,6 +221,8 @@ code {
 .large-text.sub {
   font-size: 20px;
   text-align: center;
+  padding-top: 4.5rem;
+  /* padding-bottom: 6rem; */
 } 
 
 .large-text.sub.animate {

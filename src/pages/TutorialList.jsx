@@ -16,7 +16,7 @@ export default function TutorialList(props) {
 			link="/tutorials/writing-a-physics-engine-to-prove-its-not-hard"
 			image="/tutorials/writing-a-physics-engine-to-prove-its-not-hard/thumb.gif"
 			tags="Lua"
-			description="A tutorial on how to write a custom physics engine"
+			description="A tutorial on how to write a custom physics engine."
 			/>
 
 			<Project

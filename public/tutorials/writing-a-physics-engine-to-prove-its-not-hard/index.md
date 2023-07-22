@@ -2,7 +2,7 @@
 
 ![Thumbnail gif](/tutorials/writing-a-physics-engine-to-prove-its-not-hard/thumb.gif)
 
-When it comes to implementing basic physics in games, many resort to the all in one solution that is Box2D. However, while Box2D may just work, it is overkill for most situations. If all you need is box-to-box collisions, then much simpler, reliable and efficient solutions can be implemented instead. A platformer does not need rotations, realistic mass, centre of weight, or anything of the sort for it to feel fluid, and in fact implementing your own physics engine can help customise the feel of your game further. 
+When it comes to implementing basic physics in games, many resort to the all in one solution that is Box2D. However, while Box2D may just work, it is overkill for most applications. If all you need is box-to-box collisions, then much simpler, reliable and efficient solutions can be implemented instead. A platformer does not need rotations, realistic mass, centre of weight, or anything of the sort for it to feel fluid, and in fact implementing your own physics engine can help customise the feel of your game further. 
 
 ## Getting Started
 

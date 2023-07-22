@@ -9,6 +9,8 @@ export default function ProjectList(props) {
 			<br/>
 			<br/>
 
+			{/* <h1>Projects</h1> */}
+
 			<h2>Featured</h2>
 
 			<Project

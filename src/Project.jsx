@@ -23,7 +23,7 @@ export default function Project(props) {
 		return (
 			<div className="project">
 				<AnimatedLink to={props.link}>
-					<img src={props.image}/>
+					<img src={props.image} loading="lazy" />
 				</AnimatedLink>
 				<div>
 					<AnimatedLink to={props.link}>

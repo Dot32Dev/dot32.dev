@@ -139,10 +139,11 @@ video {
 
 code {
   font-size: 1.3em;
+  tab-size: 2;
 }
 
 :not(pre) > code {
-  font-size: 1.3em;
+  font-size: 1em;
   color: orange;
   white-space: nowrap;
   background-color: hsl(295, 13%, 10%);

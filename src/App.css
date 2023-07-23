@@ -459,6 +459,7 @@ hr {
 	width: 100%;
 	display: flex;
 	justify-content: flex-start;
+  height: 0;
 }
 
 .contents-container {
@@ -475,4 +476,10 @@ hr {
 	/* display: none; */
   background-color: black;
 	view-transition-name: contents;
+}
+
+@media (max-width: 1250px) { 
+  .contents-fixed {
+    display: none;
+  }
 }

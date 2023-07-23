@@ -413,7 +413,7 @@ hr {
   .large-text.top span {
     display: none;
   }
-  video {
+  .home video {
     /* width calc 100% plus 3em */
     width: calc(100% + 4em);
   }
@@ -453,7 +453,8 @@ hr {
 
 .contents-fixed {
 	position: sticky;
-	top: 30px;
+	/* top: 30px; */
+  top: 10vh;
 	pointer-events: none;
 	width: 100%;
 	display: flex;

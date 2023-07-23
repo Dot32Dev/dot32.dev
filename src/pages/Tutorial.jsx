@@ -56,7 +56,7 @@ export default function Tutorial(props) {
 				<div className='contents-fixed'>
 					<div className='contents-container'>
 						<div className='contents'>
-							<h2>Contents:</h2>
+							<h2>Table of Contents</h2>
 							<ul>
 								{h2Headings.map((heading, index) => (
 								<li key={index}>

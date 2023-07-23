@@ -45,6 +45,11 @@ export default function Tutorial(props) {
 			h1Element.classList.add("tutorial-title");
 			const parent = document.querySelector(".tutorial").parentNode;
 			parent.insertBefore(h1Element, parent.firstChild);
+
+			// // Get the contents list h3
+			// const contentsHeading = document.querySelector(".contents h3");
+			// // Set its text content to the h1 element's text content
+			// contentsHeading.textContent = h1Element.textContent;
 		}
 
 		// Get all h2 headings
@@ -71,7 +76,7 @@ export default function Tutorial(props) {
 				<div className='contents-fixed'>
 					<div className='contents-container'>
 						<div className='contents'>
-							<h2>Table of Contents</h2>
+							<h3>Contents</h3>
 							<ul>
 								{h2Headings.map((heading, index) => (
 								<li key={index}>

@@ -470,15 +470,27 @@ hr {
 }
 
 .contents {
-	/* width: 80%; */
-	/* max-width: 500px; */
+	width: 80%;
+	max-width: 500px;
 	pointer-events: auto;
 	box-sizing: border-box;
 	/* display: none; */
   /* background-color: black; */
 	view-transition-name: contents;
-  padding-left: 10%;
+  /* padding-left: 10%; */
   /* width: fit-content; */
+  margin: auto;
+  padding: 2rem;
+  /* margin-right: 2rem; */
+  /* background-color: #14161a; */
+  /* border-radius: 0.3rem; */
+  border: 1px solid #30363d;
+  /* border-right: 1px solid #30363d; */
+  /* border-left: 1px solid #30363d; */
+  /* border-top: 1px solid #30363d; */
+  /* border-bottom: 1px solid #30363d; */
+  /* background-color: rgba(0, 0, 0, 0.15); */
+  /* background-color: black; */
 }
 
 @media (max-width: 1250px) { 
@@ -490,10 +502,46 @@ hr {
 .tutorial-title {
   max-width: 860px;
   margin: auto;
-  margin-top: 6rem;
-  margin-bottom: 2rem;
+  margin-top: 9rem;
+  margin-bottom: 6rem;
 }
 
 .tutorial h2 {
   scroll-margin-top: 4rem;
+}
+
+p:has(img) {
+  margin-top: 0;
+}
+
+.contents ul {
+  list-style: none;
+  padding-left: 0;
+  /* color: white; */
+}
+
+.contents ul li a {
+  color: inherit;
+  /* border-bottom: 1px solid #30363d;
+  display:block; */
+}
+
+.contents h3 {
+  /* border-bottom: 1px solid #30363d; */
+  border-bottom: 5px solid var(--brand-colour);
+  padding-right: 1rem;
+  font-size: 1.3rem;
+  width: fit-content;
+}
+
+.contents li a {
+  transition: padding-left 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.contents li:hover a {
+  color: var(--brand-colour);
+  /* font-weight: bold; */
+  /* padding-left: 0.5rem; */
+  /* list-style: disc; */
 }

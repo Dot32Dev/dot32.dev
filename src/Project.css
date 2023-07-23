@@ -100,7 +100,7 @@ span.tag {
 }
 
 @media only screen and (max-width: 625px) {
-	h1, h2, p, main ul {
+	h1, h2, .project p, main ul {
 		text-align: center;
 		list-style-type: none;
 	}

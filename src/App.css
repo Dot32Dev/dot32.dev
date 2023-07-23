@@ -436,8 +436,9 @@ hr {
   .tutorial pre {
     margin: 20px;
   }
-  .tutorial h1 {
+  .tutorial-title {
     padding: 0px 20px;
+    margin-top: 6rem !important;
   }
   .tutorial code {
     font-size: 1rem !important;
@@ -474,12 +475,21 @@ hr {
 	pointer-events: auto;
 	box-sizing: border-box;
 	/* display: none; */
-  background-color: black;
+  /* background-color: black; */
 	view-transition-name: contents;
+  padding-left: 10%;
+  /* width: fit-content; */
 }
 
 @media (max-width: 1250px) { 
   .contents-fixed {
     display: none;
   }
+}
+
+.tutorial-title {
+  max-width: 860px;
+  margin: auto;
+  margin-top: 6rem;
+  margin-bottom: 2rem;
 }

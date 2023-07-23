@@ -32,6 +32,21 @@ export default function Tutorial(props) {
 	}, [markdown]);
 
 	useEffect(() => {
+		// Get the h1 element
+		const h1Element = document.querySelector(".tutorial h1");
+		// Remove it and append it to the tutorial div's parent
+		// h1Element.parentNode.removeChild(h1Element);
+		// Get .tutorial's parent
+		// const parent = document.querySelector(".tutorial").parentNode;
+		// Insert the h1 element at the beginning of the parent
+		// parent.insertBefore(h1Element, parent.firstChild);
+		if (h1Element) { 
+			h1Element.parentNode.removeChild(h1Element);
+			h1Element.classList.add("tutorial-title");
+			const parent = document.querySelector(".tutorial").parentNode;
+			parent.insertBefore(h1Element, parent.firstChild);
+		}
+
 		// Get all h2 headings
 		const h2Elements = document.querySelectorAll(".tutorial h2");
 		// Set the id of each h2 element to its text content
@@ -49,9 +64,9 @@ export default function Tutorial(props) {
 
 	return (
 		<div>
+			{/* <br/>
 			<br/>
-			<br/>
-			<br/>
+			<br/> */}
 			{markdown !== ""? (
 				<div className='contents-fixed'>
 					<div className='contents-container'>

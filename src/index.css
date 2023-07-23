@@ -21,6 +21,8 @@
 
   --brand-colour: #1e90ff;
   --brand-colour: #5069cb;
+
+  scroll-behavior: smooth;
 }
 
 a {

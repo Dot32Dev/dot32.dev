@@ -493,3 +493,7 @@ hr {
   margin-top: 6rem;
   margin-bottom: 2rem;
 }
+
+.tutorial h2 {
+  scroll-margin-top: 4rem;
+}

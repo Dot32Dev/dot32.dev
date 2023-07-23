@@ -33,7 +33,7 @@ export default function Tutorial(props) {
 
 	useEffect(() => {
 		// Get all h2 headings
-		const h2Elements = document.querySelectorAll("h2");
+		const h2Elements = document.querySelectorAll(".tutorial h2");
 		// Set the id of each h2 element to its text content
 		h2Elements.forEach((heading) => {
 			const id = heading.textContent.toLowerCase().replace(/\s+/g, '-');

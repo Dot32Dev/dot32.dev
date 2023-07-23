@@ -452,8 +452,8 @@ hr {
 }
 
 .contents-fixed {
-	position: fixed;
-	top: 120px;
+	position: sticky;
+	top: 30px;
 	pointer-events: none;
 	width: 100%;
 	display: flex;

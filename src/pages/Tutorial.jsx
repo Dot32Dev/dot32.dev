@@ -48,46 +48,48 @@ export default function Tutorial(props) {
 	}, [markdown]);
 
 	return (
-		<div className="tutorial">
-			<br/>
-			<br/>
-			<br/>
-			
-			<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
-
-			{/* <ReactMarkdown
-				// children={markdown}
-				// renderers={{
-				// heading: ({ level, children }) => {
-				// 	// Generate a unique id based on the heading content
-				// 	const id = children.map((child) => child.props.value.toLowerCase()).join('-');
-				// 	// Adjust the 'level' prop to create nested headings correctly
-				// 	const Tag = `h${level + 1}`;
-				// 	return <Tag id={id}>{children}</Tag>;
-				// },
-				// }}
-				components={{
-					heading: ({ level, children }) => {
-						// Generate a unique id based on the heading content
-						const id = children.map((child) => child.props.value.toLowerCase()).join('-');
-						console.log("i was here")
-						// Adjust the 'level' prop to create nested headings correctly
-						const Tag = `h${level + 1}`;
-						return <Tag id={id}>{children}</Tag>;
-					}
-				}}
-			>markdown</ReactMarkdown> */}
-
-			{/* {isReady ? (
+		<div>
+			<div className="tutorial">
+				<br/>
+				<br/>
+				<br/>
+				
 				<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
-			) : (
-				<img src="/tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." className='thumbgif' />
-			)} */}
-			{/* <img src="/tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." className='thumbgif' /> */}
 
-			{/* <hr/>
+				{/* <ReactMarkdown
+					// children={markdown}
+					// renderers={{
+					// heading: ({ level, children }) => {
+					// 	// Generate a unique id based on the heading content
+					// 	const id = children.map((child) => child.props.value.toLowerCase()).join('-');
+					// 	// Adjust the 'level' prop to create nested headings correctly
+					// 	const Tag = `h${level + 1}`;
+					// 	return <Tag id={id}>{children}</Tag>;
+					// },
+					// }}
+					components={{
+						heading: ({ level, children }) => {
+							// Generate a unique id based on the heading content
+							const id = children.map((child) => child.props.value.toLowerCase()).join('-');
+							console.log("i was here")
+							// Adjust the 'level' prop to create nested headings correctly
+							const Tag = `h${level + 1}`;
+							return <Tag id={id}>{children}</Tag>;
+						}
+					}}
+				>markdown</ReactMarkdown> */}
 
-			<p>Have any questions? Join the <a className="cta" href="https://discord.gg/Pswb8khdgQ">Discord server</a></p> */}
+				{/* {isReady ? (
+					<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
+				) : (
+					<img src="/tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." className='thumbgif' />
+				)} */}
+				{/* <img src="/tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." className='thumbgif' /> */}
+
+				{/* <hr/>
+
+				<p>Have any questions? Join the <a className="cta" href="https://discord.gg/Pswb8khdgQ">Discord server</a></p> */}
+			</div>
 
 			{markdown !== ""? (
 				<div className='contents-fixed'>

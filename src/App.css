@@ -462,13 +462,13 @@ hr {
 
 .contents-container {
 	box-sizing: border-box;
-	width: calc(50% - 420px);
+	width: calc(50% - 340px);
 	pointer-events: none;
 }
 
 .contents {
-	width: 80%;
-	max-width: 500px;
+	/* width: 80%; */
+	/* max-width: 500px; */
 	pointer-events: auto;
 	box-sizing: border-box;
 	/* display: none; */

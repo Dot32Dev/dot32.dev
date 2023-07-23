@@ -90,15 +90,19 @@ export default function Tutorial(props) {
 			<p>Have any questions? Join the <a className="cta" href="https://discord.gg/Pswb8khdgQ">Discord server</a></p> */}
 
 			{markdown !== ""? (
-				<div>
-					<h2>Contents:</h2>
-					<ul>
-						{h2Headings.map((heading, index) => (
-						<li key={index}>
-							<a href={`#${heading.toLowerCase().replace(/\s+/g, '-')}`}>{heading}</a>
-						</li>
-						))}
-					</ul>
+				<div className='contents-fixed'>
+					<div className='contents-container'>
+						<div className='contents'>
+							<h2>Contents:</h2>
+							<ul>
+								{h2Headings.map((heading, index) => (
+								<li key={index}>
+									<a href={`#${heading.toLowerCase().replace(/\s+/g, '-')}`}>{heading}</a>
+								</li>
+								))}
+							</ul>
+						</div>
+					</div>
 				</div>
 			): null}
 		</div>

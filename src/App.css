@@ -450,3 +450,28 @@ hr {
     padding-right: 20px;
   }
 }
+
+.contents-fixed {
+	position: fixed;
+	top: 120px;
+	pointer-events: none;
+	width: 100%;
+	display: flex;
+	justify-content: flex-start;
+}
+
+.contents-container {
+	box-sizing: border-box;
+	width: calc(50% - 420px);
+	pointer-events: none;
+}
+
+.contents {
+	width: 80%;
+	max-width: 500px;
+	pointer-events: auto;
+	box-sizing: border-box;
+	/* display: none; */
+  background-color: black;
+	view-transition-name: contents;
+}

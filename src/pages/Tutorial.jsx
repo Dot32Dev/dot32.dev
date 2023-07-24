@@ -74,16 +74,26 @@ export default function Tutorial(props) {
 			<br/> */}
 			{markdown !== ""? (
 				<div className='contents-fixed'>
+					{h2Headings.length > 0? (
 					<div className='contents-container'>
-						<div className='contents'>
-							<h3>Contents</h3>
-							<ul>
-								{h2Headings.map((heading, index) => (
-								<li key={index}>
-									<a href={`#${heading.toLowerCase().replace(/\s+/g, '-')}`}>{heading}</a>
-								</li>
-								))}
-							</ul>
+							<div className='contents'>
+								<h3>Contents</h3>
+								<ul>
+									{h2Headings.map((heading, index) => (
+									<li key={index}>
+										<a href={`#${heading.toLowerCase().replace(/\s+/g, '-')}`}>{heading}</a>
+									</li>
+									))}
+								</ul>
+							</div>
+					</div>
+						): null}
+					<div className='contents-container'>
+						<div className="contents">
+							<h3>Have any questions?</h3>
+							<p>Join the <a href="https://discord.gg/Pswb8khdgQ">Discord Server!</a></p>
+							{/* <p>Noticed a spelling mistake?</p> */}
+							<p>Noticed a spelling mistake?<br/><a href="https://github.com/Dot32IsCool/dot32.dev-v5/tree/main/public/tutorials">Submit a PR</a> or <a href="https://github.com/Dot32IsCool/dot32.dev-v5/issues/new">open an issue.</a></p>
 						</div>
 					</div>
 				</div>
@@ -121,9 +131,15 @@ export default function Tutorial(props) {
 				)} */}
 				{/* <img src="/tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." className='thumbgif' /> */}
 
-				{/* <hr/>
+				{/* <hr/> */}
+				{/* <br/> */}
+				{/* <p>Have any questions? Join the <a href="https://discord.gg/Pswb8khdgQ"><img src="https://img.shields.io/discord/922185010205822976?color=5865F2&label=discord&style=for-the-badge"/></a></p> */}
+				{/* <a className="action discord" href="https://discord.gg/Pswb8khdgQ">Have any questions? Join the Discord Server</a>
+				<a className="action github" href="https://github.com/Dot32IsCool/dot32.dev-v5/tree/main/public/tutorials">Notice a spelling mistake? Submit a PR</a> */}
 
-				<p>Have any questions? Join the <a className="cta" href="https://discord.gg/Pswb8khdgQ">Discord server</a></p> */}
+				{/* <br/>
+				<br/>
+				<br/> */}
 			</div>
 		</div>
 	)

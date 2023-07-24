@@ -150,7 +150,7 @@ code {
 }
 
 .hljs {
-  border-radius: 12px;
+  border-radius: 0.5rem;
   background-color: hsl(295, 13%, 10%) !important;
 }
 
@@ -459,7 +459,8 @@ hr {
 	pointer-events: none;
 	width: 100%;
 	display: flex;
-	justify-content: flex-start;
+	/* justify-content: flex-start; */
+	justify-content: space-between;
   height: 0;
 }
 
@@ -470,27 +471,34 @@ hr {
 }
 
 .contents {
-	width: 80%;
-	max-width: 500px;
+	/* width: 80%; */
+	max-width: 250px;
 	pointer-events: auto;
 	box-sizing: border-box;
 	/* display: none; */
   /* background-color: black; */
 	view-transition-name: contents;
   /* padding-left: 10%; */
-  /* width: fit-content; */
+  width: fit-content;
   margin: auto;
-  padding: 2rem;
+  /* padding: 2rem; */
   /* margin-right: 2rem; */
   /* background-color: #14161a; */
   /* border-radius: 0.3rem; */
   /* border: 1px solid #30363d; */
   /* border-right: 1px solid #30363d; */
-  border-left: 1px solid #30363d;
+  /* border-left: 1px solid #30363d; */
   /* border-top: 1px solid #30363d; */
   /* border-bottom: 1px solid #30363d; */
   /* background-color: rgba(0, 0, 0, 0.15); */
   /* background-color: black; */
+}
+
+.contents-container:first-child .contents {
+  /* border-left: none; */
+  /* border-right: 1px solid #30363d; */
+  /* border-right: none;
+  border-left: 1px solid #30363d; */
 }
 
 @media (max-width: 1250px) { 
@@ -535,13 +543,15 @@ p:has(img) {
   width: fit-content;
 }
 
-.contents li a {
+.contents li a, .contents p {
   text-decoration: none;
   font-size: 1.1rem;
 }
 
 .contents li {
   transition: transform 0.2s ease-in-out;
+  /* line-height: 1.2rem; */
+  /* margin-bottom: 1rem; */
 }
 
 .contents li:hover {
@@ -550,4 +560,28 @@ p:has(img) {
   /* font-weight: bold; */
   /* padding-left: 0.5rem; */
   /* list-style: disc; */
+}
+
+.action {
+  text-align: center;
+  border: 1px solid #30363d;
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: block;
+  margin: 1rem;
+  color: white;
+}
+
+.action.discord {
+  border-color: var(--brand-colour);
+}
+
+.action.discord:hover {
+  background-color: var(--brand-colour);
+  text-decoration: none;
+}
+
+.action.github:hover {
+  background-color: #30363d;
+  text-decoration: none;
 }

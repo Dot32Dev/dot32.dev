@@ -546,7 +546,7 @@ p:has(img) {
 
 .contents li:hover {
   color: var(--brand-colour);
-  transform: translateX(1rem);
+  transform: translateX(5px);
   /* font-weight: bold; */
   /* padding-left: 0.5rem; */
   /* list-style: disc; */

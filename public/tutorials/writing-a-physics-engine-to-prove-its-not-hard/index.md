@@ -231,6 +231,7 @@ And that is it done! Enjoy your home-made versatile physics engine.
   <source src="https://cdn.discordapp.com/attachments/577832597686583310/1132286244873830511/completed_the_resolution.mp4" type="video/mp4">
 </video>
 
+The sourcecode for this tutorial is publically availble on [Github.](https://github.com/Dot32IsCool/platformer_physics_tutorial)
 
 If you would also like to add circles to your physics engine, check out my [circle versus rectangle collision](https://dot32.netlify.app/tutorials/circle-vs-rectangle-collision) tutorial.
 

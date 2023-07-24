@@ -484,9 +484,9 @@ hr {
   /* margin-right: 2rem; */
   /* background-color: #14161a; */
   /* border-radius: 0.3rem; */
-  border: 1px solid #30363d;
+  /* border: 1px solid #30363d; */
   /* border-right: 1px solid #30363d; */
-  /* border-left: 1px solid #30363d; */
+  border-left: 1px solid #30363d;
   /* border-top: 1px solid #30363d; */
   /* border-bottom: 1px solid #30363d; */
   /* background-color: rgba(0, 0, 0, 0.15); */
@@ -504,6 +504,7 @@ hr {
   margin: auto;
   margin-top: 9rem;
   margin-bottom: 6rem;
+  scroll-margin-top: 9rem;
 }
 
 .tutorial h2 {
@@ -535,12 +536,17 @@ p:has(img) {
 }
 
 .contents li a {
-  transition: padding-left 0.2s ease-in-out;
   text-decoration: none;
+  font-size: 1.1rem;
 }
 
-.contents li:hover a {
+.contents li {
+  transition: transform 0.2s ease-in-out;
+}
+
+.contents li:hover {
   color: var(--brand-colour);
+  transform: translateX(1rem);
   /* font-weight: bold; */
   /* padding-left: 0.5rem; */
   /* list-style: disc; */

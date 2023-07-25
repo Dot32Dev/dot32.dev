@@ -565,3 +565,11 @@ p:has(img) {
 .contents li:hover {
   color: var(--brand-colour);
 }
+
+video:nth-child(2) {
+  position: absolute;
+  filter: blur(3rem);
+  /* scale: 2.5; */
+  /* scale: 1.1; */
+  opacity: 0.6;
+}

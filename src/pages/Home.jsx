@@ -31,6 +31,9 @@ export default function ProjectList(props) {
 				<video autoPlay muted playsInline loop>
 					<source src="/gradientlogo.webm" />
 				</video>
+				{/* <video autoPlay muted playsInline loop>
+					<source src="/gradientlogo.webm" />
+				</video> */}
 			</div>
 			{/* <br/>
 			<br/>

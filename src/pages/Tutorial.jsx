@@ -24,7 +24,7 @@ export default function Tutorial(props) {
 			setMarkdown(text);
 			console.log("markdown fetch")
 		});
-	}, [markdown]);
+	}, []);
 		
 	useEffect(() => {
 		hljs.highlightAll();
@@ -58,6 +58,7 @@ export default function Tutorial(props) {
 		h2Elements.forEach((heading) => {
 			const id = heading.textContent.toLowerCase().replace(/\s+/g, '-');
 			heading.id = id;
+			console.log(heading.getBoundingClientRect().top);
 		});
 
 		// Extract the text content of each h2 element and store in an array
@@ -66,6 +67,34 @@ export default function Tutorial(props) {
 		setH2Headings(headings);
 		console.log(headings)
 	}, [markdown]);
+
+	useEffect(() => {
+		window.addEventListener('scroll', (event) => {
+			const anchors = document.querySelectorAll('h2');
+			const links = document.querySelectorAll('.contents > ul > li');
+
+			if (typeof(anchors) != 'undefined' && anchors != null && typeof(links) != 'undefined' && links != null) {
+			  let scrollTop = window.scrollY;
+			  
+			  // highlight the last scrolled-to: set everything inactive first
+			  links.forEach((link, index) => {
+				link.classList.remove("active");
+			  });
+			  
+			  // then iterate backwards, on the first match highlight it and break
+			  for (var i = anchors.length-1; i >= 0; i--) {
+				if (scrollTop > anchors[i].offsetTop - 75) {
+				  links[i].classList.add('active');
+				  break;
+				}
+			  }
+			}
+			// for (let i = 0; i < anchors.length; i++) {
+			// 	console.log(anchors[i].getBoundingClientRect().top + anchors[i].innerHTML)
+			// 	// anchors[i].classList.remove('active');/
+			// }
+		  });
+	}, []);
 
 	return (
 		<div>

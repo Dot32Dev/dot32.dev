@@ -38,3 +38,14 @@ Now, you should be able to easily compute which sprite to select when drawing yo
 ![auto tilling image](/tutorials/auto-tilling/tiles.svg)
 
 <span style="text-align: center;display: block;">Published 18th Jan 2021, last updated 21st Jul 2021</span>
+
+<!-- <div id="json">
+	{
+		"author": "Dot32",
+		"date": "18th Jan 2021",
+		"edited": "21st Jul 2021",
+		"title": "Custom autotilling made easy",
+		"description": "Building your own auto tilling implementation is not as hard as you thought!",
+		"image": "/tutorials/auto-tilling/thumb.gif"
+	}
+</div> -->

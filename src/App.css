@@ -554,34 +554,10 @@ p:has(img) {
   /* margin-bottom: 1rem; */
 }
 
-.contents li:hover {
+.contents li.active, .contents li:hover {
   color: var(--brand-colour);
   transform: translateX(5px);
   /* font-weight: bold; */
   /* padding-left: 0.5rem; */
   /* list-style: disc; */
-}
-
-.action {
-  text-align: center;
-  border: 1px solid #30363d;
-  border-radius: 0.5rem;
-  padding: 0.5rem;
-  display: block;
-  margin: 1rem;
-  color: white;
-}
-
-.action.discord {
-  border-color: var(--brand-colour);
-}
-
-.action.discord:hover {
-  background-color: var(--brand-colour);
-  text-decoration: none;
-}
-
-.action.github:hover {
-  background-color: #30363d;
-  text-decoration: none;
 }

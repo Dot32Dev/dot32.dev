@@ -77,17 +77,27 @@ export default function Tutorial(props) {
 			  let scrollTop = window.scrollY;
 			  
 			  // highlight the last scrolled-to: set everything inactive first
-			  links.forEach((link, index) => {
-				link.classList.remove("active");
-			  });
-			  
-			  // then iterate backwards, on the first match highlight it and break
-			  for (var i = anchors.length-1; i >= 0; i--) {
-				if (scrollTop > anchors[i].offsetTop - 75) {
-				  links[i].classList.add('active');
-				  break;
+			//   links.forEach((link, index) => {
+			// 	link.classList.remove("active");
+			//   });
+
+				let activeIndex = 0;
+				// then iterate backwards, on the first match highlight it and break
+				for (var i = anchors.length-1; i >= 0; i--) {
+					if (scrollTop > anchors[i].offsetTop - 75) {
+					//   links[i].classList.add('active');
+						activeIndex = i;
+						break;
+					}
 				}
-			  }
+
+				for (var i = 0; i < links.length; i++) {
+					if (i == activeIndex) {
+						links[i].classList.add('active');
+					} else {
+						links[i].classList.remove('active');
+					}
+				}
 			}
 			// for (let i = 0; i < anchors.length; i++) {
 			// 	console.log(anchors[i].getBoundingClientRect().top + anchors[i].innerHTML)

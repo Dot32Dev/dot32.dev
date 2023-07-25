@@ -554,10 +554,14 @@ p:has(img) {
   /* margin-bottom: 1rem; */
 }
 
-.contents li.active, .contents li:hover {
+.contents li.active {
   color: var(--brand-colour);
   transform: translateX(5px);
   /* font-weight: bold; */
   /* padding-left: 0.5rem; */
   /* list-style: disc; */
+}
+
+.contents li:hover {
+  color: var(--brand-colour);
 }

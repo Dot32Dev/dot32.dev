@@ -119,7 +119,7 @@ export default function Tutorial(props) {
 								<h3>Contents</h3>
 								<ul>
 									{h2Headings.map((heading, index) => (
-									<li key={index}>
+									<li key={index} className={index === 0 ? 'active' : ''}>
 										<a href={`#${heading.toLowerCase().replace(/\s+/g, '-')}`}>{heading}</a>
 									</li>
 									))}

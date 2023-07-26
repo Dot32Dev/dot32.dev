@@ -573,3 +573,7 @@ video:nth-child(2) {
   /* scale: 1.1; */
   opacity: 0.6;
 }
+
+#json {
+  display: none;
+}

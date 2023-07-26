@@ -237,15 +237,14 @@ If you would also like to add circles to your physics engine, check out my [circ
 
 <span style="text-align: center;display: block;">Published 24nd Jul 2023, last updated 22nd Jul 2023</span>
 
-<!-- <div id="json">
-
+<div id="json">
 	{
 		"archived": false,
 		"author": "Dot32",
 		"date": "22nd Jul 2023",
 		"edited": "24nd Jul 2023",
 		"title": "Writing a physics engine to prove it's not hard",
-    "description": "A tutorial on how to write a custom physics engine.",
+    	"description": "A tutorial on how to write a custom physics engine.",
 		"image": "/tutorials/writing-a-physics-engine-to-prove-its-not-hard/thumb.gif"
 	}
-</div> -->
+</div>

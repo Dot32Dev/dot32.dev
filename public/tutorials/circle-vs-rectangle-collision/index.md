@@ -89,3 +89,14 @@ When all else fails, you could always google point versus circle collision resol
 Happy coding!
 
 <span style="text-align: center;display: block;">Published 18th Jan 2021, last updated 22nd Feb 2023</span>
+
+<div id="json">
+  {
+    "author": "Dot32",
+    "date": "18th Jan 2021",
+    "edited": "2nd Feb 2022",
+    "title": "Circle VS rectangle collision detection",
+    "description": "This written tutorial will show you how to detect interception between circles and rectangles.",
+    "image": "/tutorials/circle-vs-rectangle-collision/thumb.gif"
+  }
+</div>

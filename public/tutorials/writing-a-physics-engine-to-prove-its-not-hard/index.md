@@ -235,7 +235,7 @@ The sourcecode for this tutorial is publically availble on [Github.](https://git
 
 If you would also like to add circles to your physics engine, check out my [circle versus rectangle collision](https://dot32.netlify.app/tutorials/circle-vs-rectangle-collision) tutorial.
 
-<span style="text-align: center;display: block;">Published 24nd Jul 2023, last updated 22nd Jul 2023</span>
+<!-- <span style="text-align: center;display: block;">Published 24nd Jul 2023, last updated 22nd Jul 2023</span> -->
 
 <div id="json">
 	{

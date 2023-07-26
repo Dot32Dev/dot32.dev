@@ -37,7 +37,7 @@ Now, you should be able to easily compute which sprite to select when drawing yo
 
 ![auto tilling image](/tutorials/auto-tilling/tiles.svg)
 
-<span style="text-align: center;display: block;">Published 18th Jan 2021, last updated 21st Jul 2021</span>
+<!-- <span style="text-align: center;display: block;">Published 18th Jan 2021, last updated 21st Jul 2021</span> -->
 
 <div id="json">
 	{

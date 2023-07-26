@@ -88,7 +88,7 @@ When all else fails, you could always google point versus circle collision resol
 
 Happy coding!
 
-<span style="text-align: center;display: block;">Published 18th Jan 2021, last updated 22nd Feb 2023</span>
+<!-- <span style="text-align: center;display: block;">Published 18th Jan 2021, last updated 22nd Feb 2023</span> -->
 
 <div id="json">
   {

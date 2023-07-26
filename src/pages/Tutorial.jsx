@@ -11,6 +11,7 @@ import hljs from "highlight.js";
 export default function Tutorial(props) {
 	const { id } = useParams()
 	const [markdown, setMarkdown] = useState("");
+	const [dates, setDates] = useState("");
 	const [h2Headings, setH2Headings] = useState([]);
 	// const isReady = markdown !== "";
 
@@ -78,18 +79,11 @@ export default function Tutorial(props) {
 			const links = document.querySelectorAll('.contents > ul > li');
 
 			if (typeof(anchors) != 'undefined' && anchors != null && typeof(links) != 'undefined' && links != null) {
-			  let scrollTop = window.scrollY;
-			  
-			  // highlight the last scrolled-to: set everything inactive first
-			//   links.forEach((link, index) => {
-			// 	link.classList.remove("active");
-			//   });
+				let scrollTop = window.scrollY;
 
 				let activeIndex = 0;
-				// then iterate backwards, on the first match highlight it and break
 				for (var i = anchors.length-1; i >= 0; i--) {
 					if (scrollTop > anchors[i].offsetTop - 75) {
-					//   links[i].classList.add('active');
 						activeIndex = i;
 						break;
 					}
@@ -103,12 +97,22 @@ export default function Tutorial(props) {
 					}
 				}
 			}
-			// for (let i = 0; i < anchors.length; i++) {
-			// 	console.log(anchors[i].getBoundingClientRect().top + anchors[i].innerHTML)
-			// 	// anchors[i].classList.remove('active');/
-			// }
 		  });
 	}, []);
+
+	useEffect(() => {
+		// Get the element with the id of json
+		const jsonElement = document.getElementById("json");
+		if (jsonElement) {
+			// Get innerhtml
+			const json = jsonElement.innerHTML;
+			// Parse the json
+			const parsedJson = JSON.parse(json);
+			// console.log(parsedJson);
+			setDates("Published " + parsedJson.date + ", last updated " + parsedJson.edited);
+			console.log(dates);
+		}
+	}, [markdown]);
 
 	return (
 		<div>
@@ -143,46 +147,7 @@ export default function Tutorial(props) {
 			): null}
 			<div className="tutorial">
 				<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
-
-				{/* <ReactMarkdown
-					// children={markdown}
-					// renderers={{
-					// heading: ({ level, children }) => {
-					// 	// Generate a unique id based on the heading content
-					// 	const id = children.map((child) => child.props.value.toLowerCase()).join('-');
-					// 	// Adjust the 'level' prop to create nested headings correctly
-					// 	const Tag = `h${level + 1}`;
-					// 	return <Tag id={id}>{children}</Tag>;
-					// },
-					// }}
-					components={{
-						heading: ({ level, children }) => {
-							// Generate a unique id based on the heading content
-							const id = children.map((child) => child.props.value.toLowerCase()).join('-');
-							console.log("i was here")
-							// Adjust the 'level' prop to create nested headings correctly
-							const Tag = `h${level + 1}`;
-							return <Tag id={id}>{children}</Tag>;
-						}
-					}}
-				>markdown</ReactMarkdown> */}
-
-				{/* {isReady ? (
-					<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
-				) : (
-					<img src="/tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." className='thumbgif' />
-				)} */}
-				{/* <img src="/tutorials/circle-vs-rectangle-collision/thumb.gif" alt="Loading..." className='thumbgif' /> */}
-
-				{/* <hr/> */}
-				{/* <br/> */}
-				{/* <p>Have any questions? Join the <a href="https://discord.gg/Pswb8khdgQ"><img src="https://img.shields.io/discord/922185010205822976?color=5865F2&label=discord&style=for-the-badge"/></a></p> */}
-				{/* <a className="action discord" href="https://discord.gg/Pswb8khdgQ">Have any questions? Join the Discord Server</a>
-				<a className="action github" href="https://github.com/Dot32IsCool/dot32.dev-v5/tree/main/public/tutorials">Notice a spelling mistake? Submit a PR</a> */}
-
-				{/* <br/>
-				<br/>
-				<br/> */}
+				<p className='dates'>{dates}</p>
 			</div>
 		</div>
 	)

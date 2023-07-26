@@ -19,10 +19,14 @@ export default function Tutorial(props) {
 
 	useEffect(() => {
 		fetch(`/tutorials/${id}/index.md`) 
-		.then((res) => res.text())
+		.then((response) => {
+			if (!response.ok) {
+				return `# Error ${response.status}: ${response.statusText}`
+			}
+			return response.text()
+		})
 		.then((text) => {
 			setMarkdown(text);
-			console.log("markdown fetch")
 		});
 	}, []);
 		

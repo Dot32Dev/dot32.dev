@@ -1,10 +1,21 @@
-import useDocumentTitle from './useDocumentTitle'
+// import useDocumentTitle from './useDocumentTitle'
+import { Helmet } from 'react-helmet';
 import Project from '../Project'
 
 export default function ProjectList(props) {
-	useDocumentTitle('Projects')
+	// useDocumentTitle('Projects')
 	return (
 		<div className="projectList">
+			<Helmet>
+				<title>Projects</title>
+				<meta name="description" content="Check out my personal projects!"/>
+				
+				<meta property="og:title" content="Projects - Dot32 dev" />
+				<meta property="og:image" content="https://cdn.discordapp.com/attachments/577832597686583310/1134040308745769011/Dot32_Graffiti3.png" />
+				<meta property="og:description" content="Check out my personal projects!" />
+				<meta name="author" content="Dot32"/>
+			</Helmet>
+
 			<br/>
 			<br/>
 			<br/>

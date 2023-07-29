@@ -1,8 +1,9 @@
-import useDocumentTitle from './useDocumentTitle'
+// import useDocumentTitle from './useDocumentTitle'
+import { Helmet } from 'react-helmet';
 import {useRef, useEffect} from 'react';
 
 export default function ProjectList(props) {
-	useDocumentTitle('Dot32')
+	// useDocumentTitle('Dot32')
 	
 	const vid = useRef(null);
 	const animate = useRef([]);
@@ -26,6 +27,16 @@ export default function ProjectList(props) {
 
 	return (
 		<div className="home" >
+			<Helmet>
+				<title>Dot32</title>
+				<meta name="description" content="I am Dot32, a passionate programmer from Western Australia."/>
+				
+				<meta property="og:title" content="Dot32 dev" />
+				<meta property="og:image" content="https://cdn.discordapp.com/attachments/577832597686583310/1134040308745769011/Dot32_Graffiti3.png" />
+				<meta property="og:description" content="I am Dot32, a passionate programmer from Western Australia." />
+				<meta name="author" content="Dot32"/>
+			</Helmet>
+
 			<p className="large-text top" ref={(el) => (animate.current[0] = el)}>Hi there, I'm <span>Dot32</span></p>
 			<div className="video-container" ref={vid}>
 				<video autoPlay muted playsInline loop>

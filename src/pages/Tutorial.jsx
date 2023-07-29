@@ -1,4 +1,5 @@
-import useDocumentTitle from './useDocumentTitle'
+// import useDocumentTitle from './useDocumentTitle'
+import { Helmet } from 'react-helmet';
 import { useParams } from 'react-router-dom'
 import React, { useState, useEffect } from "react";
 import ReactMarkdown from "react-markdown";
@@ -11,12 +12,12 @@ import hljs from "highlight.js";
 export default function Tutorial(props) {
 	const { id } = useParams()
 	const [markdown, setMarkdown] = useState("");
-	const [dates, setDates] = useState("");
+	const [pageInfo, setPageInfo] = useState({});
 	const [h2Headings, setH2Headings] = useState([]);
 	// const isReady = markdown !== "";
 
 	// Set title to contents of first h1
-	useDocumentTitle(markdown.split("\n")[0].replace("# ", ""))
+	// useDocumentTitle(markdown.split("\n")[0].replace("# ", ""))
 
 	useEffect(() => {
 		fetch(`/tutorials/${id}/index.md`) 
@@ -109,13 +110,23 @@ export default function Tutorial(props) {
 			// Parse the json
 			const parsedJson = JSON.parse(json);
 			// console.log(parsedJson);
-			setDates("Published " + parsedJson.date + ", last updated " + parsedJson.edited);
-			console.log(dates);
+			setPageInfo(parsedJson);
+			console.log(pageInfo);
 		}
 	}, [markdown]);
 
 	return (
 		<div>
+			<Helmet>
+				<title>{pageInfo.title}</title>
+				<meta name="description" content={pageInfo.description}/>
+				
+				<meta property="og:title" content={pageInfo.title} />
+				<meta property="og:image" content={pageInfo.image} />
+				<meta property="og:description" content={pageInfo.description} />
+				{/* <meta name="author" content={pageIngo.author ? {pageInfo.author} : 'Dot32'}/> */}
+			</Helmet>
+
 			{/* <br/>
 			<br/>
 			<br/> */}
@@ -147,7 +158,8 @@ export default function Tutorial(props) {
 			): null}
 			<div className="tutorial">
 				<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
-				<p className='dates'>{dates}</p>
+				<p className='dates'>Published {pageInfo.date}, last updated {pageInfo.edited}</p>
+				{/* // "Published " + parsedJson.date + ", last updated " + parsedJson.edited */}
 			</div>
 		</div>
 	)

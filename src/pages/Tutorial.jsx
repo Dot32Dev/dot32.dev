@@ -122,7 +122,7 @@ export default function Tutorial(props) {
 				<meta name="description" content={pageInfo.description}/>
 				
 				<meta property="og:title" content={pageInfo.title} />
-				<meta property="og:image" content={pageInfo.image} />
+				{/* <meta property="og:image" content={pageInfo.image} /> */}
 				<meta property="og:description" content={pageInfo.description} />
 				{/* <meta name="author" content={pageIngo.author ? {pageInfo.author} : 'Dot32'}/> */}
 			</Helmet>

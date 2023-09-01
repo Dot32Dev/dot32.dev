@@ -32,7 +32,7 @@ export default function ProjectList(props) {
 				<meta name="description" content="I am Dot32, a passionate programmer from Western Australia."/>
 				
 				<meta property="og:title" content="Dot32 dev" />
-				<meta property="og:image" content="https://cdn.discordapp.com/attachments/577832597686583310/1134040308745769011/Dot32_Graffiti3.png" />
+				{/* <meta property="og:image" content="https://cdn.discordapp.com/attachments/577832597686583310/1134040308745769011/Dot32_Graffiti3.png" /> */}
 				<meta property="og:description" content="I am Dot32, a passionate programmer from Western Australia." />
 				<meta name="author" content="Dot32"/>
 			</Helmet>

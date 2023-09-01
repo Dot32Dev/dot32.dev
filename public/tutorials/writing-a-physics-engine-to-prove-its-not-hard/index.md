@@ -225,6 +225,7 @@ Some important things to note!
 - The player is only allowed to jump in the case that the collision resolved upwards, out of the ground. 
 - The `aabb_y_check` must be done within an `elseif` branch, rather than ending the first if and starting a new if. If this is not done, both resolutions will be ran for every collision, which is not what we want.
 - If you are not resetting the player velocity to 0 on the respective axis after collision, you will eventually fall through the platform after your velocity exceeds  the height of the platform, as it will move past the entire platform in a single frame. 
+- Double check you are resolving the Y collision when the previous frame was coliding on the **X**, not the Y, and similarily for the X resolution. Counter-intuitively, a collision on one axis in the previous frame means that the new collision is on the opposite axis.
 
 And that is it done! Enjoy your home-made versatile physics engine. 
 <video autoplay="" playsinline="" loop="" muted="">

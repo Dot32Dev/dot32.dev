@@ -43,7 +43,7 @@ export default function ProjectList(props) {
 			<Project
 			name="Tiny Tank"
 			link="https://dot32.itch.io/tiny-tank"
-			image="https://dot32.dev/projects/tinytankthumb.png"
+			image="https://media.discordapp.net/attachments/577832597686583310/1147026485710966834/tinytankthumb.png"
 			tags="Windows, MacOS"
 			description="Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!"
 			/>
@@ -229,7 +229,7 @@ export default function ProjectList(props) {
 			<Project
 			name="Quick and simple platformer"
 			link="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game"
-			image="https://dot32.dev/projects/q&spthumb.png"
+			image="https://media.discordapp.net/attachments/577832597686583310/1147026617831538788/qspthumb.png?width=1722&height=1294"
 			tags="Windows, MacOS"
 			description="Contrary to the name, most people take a while to finish due to the janky physics. Nevertheless, this game has speedrunning potential"
 			/>  

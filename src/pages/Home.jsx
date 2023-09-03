@@ -39,7 +39,7 @@ export default function ProjectList(props) {
 
 			<p className="large-text top" ref={(el) => (animate.current[0] = el)}>Hi there, I'm <span>Dot32</span></p>
 			<div className="video-container" ref={vid}>
-				<video autoPlay muted playsInline loop>
+				<video controls autoPlay muted playsInline loop>
 					<source src="/gradientlogo.webm" />
 				</video>
 				{/* <video autoPlay muted playsInline loop>

@@ -75,6 +75,19 @@ export default function Tutorial(props) {
 	}, [markdown]);
 
 	useEffect(() => {
+		// Get all pre elements with class starting with "language-"
+		const preElements = document.querySelectorAll('pre code[class^="language-"]');
+		
+		// Loop over each pre element and add the data-lang attribute
+		preElements.forEach((pre) => {
+		  const match = /language-(\w+)/.exec(pre.className || '');
+		  if (match) {
+			pre.setAttribute('data-lang', match[1]);
+		  }
+		});
+	  }, [markdown]);
+
+	useEffect(() => {
 		window.addEventListener('scroll', (event) => {
 			const anchors = document.querySelectorAll('h2');
 			const links = document.querySelectorAll('.contents > ul > li');
@@ -158,6 +171,22 @@ export default function Tutorial(props) {
 			): null}
 			<div className="tutorial">
 				<ReactMarkdown rehypePlugins={[rehypeRaw]}>{markdown}</ReactMarkdown>
+				{/* <ReactMarkdown rehypePlugins={[rehypeRaw]} components={{
+				code: ({node, inline, className, children, ...props}) => {
+					const match = /language-(\w+)/.exec(className || '');
+					return !inline && match ? (
+					<pre data-lang={match[1]}>
+						<code className={className}>{children}</code>
+					</pre>
+					) : (
+					<code className={className} {...props}>
+						{children}
+					</code>
+					);
+				}
+				}}>
+				{markdown}
+				</ReactMarkdown> */}
 				<p className='dates'>Published {pageInfo.date}, last updated {pageInfo.edited}</p>
 				{/* // "Published " + parsedJson.date + ", last updated " + parsedJson.edited */}
 			</div>

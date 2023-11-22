@@ -152,7 +152,13 @@ code {
 .hljs {
   border-radius: 0.5rem;
   background-color: hsl(295, 13%, 10%) !important;
+  /* transition: border 0.1s; */
+  /* border: 1px solid #282c34; */
 }
+
+/* .hljs:hover {
+  border: 1px solid hsla(295, 13%, 50%, 0.5);
+} */
 
 .tutorial {
   max-width: 680px;
@@ -586,3 +592,40 @@ video:nth-child(2) {
   padding: 0.5rem;
   margin-bottom: 3rem;
 }
+/* 
+pre code:after {
+  content: attr(class, substring, 10);
+  display: inline-block;
+  font-size: .7rem;
+  opacity: .7;
+  position: sticky;
+  right: 0;
+  text-align: right;
+  transform: translate(-5px,20px);
+  width: 200px;
+  margin-left: -200px;
+} */
+
+pre {
+  position: relative;
+}
+
+code::after {
+  content: attr(data-lang);
+  right: 0;
+  position: absolute;
+  font-size: .7rem;
+  opacity: .5;
+  padding: 1rem;
+  bottom: 0;
+  /* border: 1px solid; */
+  border-radius: 0.5rem;
+  /* background-color: hsla(291, 14%, 10%, 0.5); */
+  /* backdrop-filter: blur(5px); */
+}
+
+/* video, img, .hljs {
+  border: 1px solid #282c34;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 1rem rgb(0, 0, 0);
+} */

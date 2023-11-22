@@ -260,7 +260,7 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 100svh;
   margin: 0;
 }
 

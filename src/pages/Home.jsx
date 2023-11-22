@@ -18,8 +18,6 @@ export default function ProjectList(props) {
 		console.log(elements);
 		// When the video is loaded, add the animate class to the video container and the elements marked for animation
 		video.onloadeddata = function() { // first frame has loaded
-			video.play();
-			
 			video_container.classList.add("animate");
 			elements.forEach(element => {
 				element.classList.add("animate");

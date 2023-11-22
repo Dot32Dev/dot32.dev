@@ -11,6 +11,8 @@
 
 	margin: 1em;
 	outline: 2px solid #282c34;
+
+	box-shadow: 0 0 1rem rgb(0, 0, 0);
 }
 
 .project:hover {

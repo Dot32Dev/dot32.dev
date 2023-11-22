@@ -629,3 +629,11 @@ code::after {
   border-radius: 0.5rem;
   box-shadow: 0 0 1rem rgb(0, 0, 0);
 } */
+
+.large-text.top {
+  z-index: 1;
+}
+
+.video-container video {
+  border-radius: 50%;
+}

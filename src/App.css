@@ -637,3 +637,61 @@ code::after {
 .video-container video {
   border-radius: 50%;
 }
+
+.noise {
+  background-image: url(/images/bg_noise.webp);
+  background-repeat: repeat;
+  mix-blend-mode: overlay;
+  /* opacity: 0;
+  opacity: 0.7; */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  /* z-index: 20; */
+  pointer-events: none;
+  display: block;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.landing-background-anim1, 
+.landing-background-anim2 {
+  --size: 550px;
+  /* --speed: 50s; */
+  --speed: 15s;
+  --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
+
+  width: var(--size);
+  height: var(--size);
+  position: absolute;
+
+  bottom: 0%;
+  left: 30%;
+  transform: translate(calc(var(--size) / -2), calc(var(--size) / -2));
+  margin-top: calc(var(--size) / -2);
+  margin-left: calc(var(--size) / -2);
+
+  filter: blur(calc(var(--size) / 5));
+  opacity: 0.3;
+  background-image: linear-gradient(#76b1e8, #5069cb);
+  /* animation: rotate var(--speed) var(--easing) alternate infinite; */
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+}
+
+.landing-background-anim2 {
+  --size: 750px;
+  top: 30%;
+  left: 70%;
+  /* left: 50%; */
+  background-image: linear-gradient(red, blue);
+}

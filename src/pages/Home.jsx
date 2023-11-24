@@ -37,29 +37,19 @@ export default function ProjectList(props) {
 				<meta name="author" content="Dot32"/>
 			</Helmet>
 
+			{/* <div className='landing-background-anim1'></div> */}
+			<div className='landing-background-anim2'></div>
+			{/* <div className='noise'></div> */}
+
 			<p className="large-text top" ref={(el) => (animate.current[0] = el)}>Hi there, I'm <span>Dot32</span></p>
 			<div className="video-container" ref={vid}>
 				<video autoPlay muted playsInline loop>
 					<source src="/gradientlogo_H.265.mp4" type='video/mp4;codecs=hvc1'/>
 					<source src="/gradientlogo_VP9.webm" type="video/webm"/>
 				</video>
-				{/* <video autoPlay muted playsInline loop>
-					<source src="/gradientlogo_H.265.mp4" />
-				</video> */}
-				{/* <video autoPlay muted playsInline loop>
-					<source src="/gradientlogo.webm" />
-				</video> */}
 			</div>
-			{/* <br/>
-			<br/>
-			<br/> */}
 			<p className="large-text sub" ref={(el) => (animate.current[1] = el)}><span>[ RUSTACEAN + WEBDEV ]</span></p>
-			{/* <br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/>
-			<br/> */}
+			
 		</div>
 	)
 }

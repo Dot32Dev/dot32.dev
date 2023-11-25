@@ -6,7 +6,7 @@ When it comes to implementing basic physics in games, many resort to the all in 
 
 ## Getting Started
 
-Start by creating a `player` table to store properties such as its position and speed. 
+Start by creating a `player` table to store properties such as position and speed. 
 ```lua
 local player = {
 	x=0,
@@ -33,10 +33,10 @@ function love.update()
 	player.xV = player.xV + 1
 end
 ```
-The players `x` position is being updated by its velocity every frame, and the velocity is being increased every frame. This creates the effect of ever-accelerating motion!
+The player's `x` position is being updated by its velocity every frame, and the velocity is being increased every frame. This creates the effect of ever-accelerating motion!
 As the player is constantly being moved by a larger and larger value, it appears to speed up over time. In a platformer, this is how gravity is simulated!
 
-Next in moving the player is accepting player input. It's pretty simple, you just add to the velocity for the direction that you are going. If right key is pressed, add one to the `x` velocity, if left key is pressed, subtract one. However, we run into an issue. Once you get going, it's almost impossible to slow down. This is solved by constantly multiplying the velocity by a friction value, or lerping it to zero.
+Next in moving the player is accepting player input. It's pretty simple, you just add to the velocity for the direction that you are going. If the right key is pressed, add one to the `x` velocity, and if left key is pressed, subtract one. However, we run into an issue. Once you get going, it's almost impossible to slow down. This is solved by constantly multiplying the velocity by a friction value, or lerping it to zero.
 ```lua
 player.xV = player.xV * 0.9
 ```
@@ -243,7 +243,7 @@ If you would also like to add circles to your physics engine, check out my [circ
 		"archived": false,
 		"author": "Dot32",
 		"date": "22nd Jul 2023",
-		"edited": "24th Jul 2023",
+		"edited": "25th Nov 2023",
 		"title": "Writing a physics engine to prove it's not hard",
     	"description": "A tutorial on how to write a custom physics engine.",
 		"image": "/tutorials/writing-a-physics-engine-to-prove-its-not-hard/thumb.gif"

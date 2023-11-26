@@ -3,16 +3,16 @@
 	align-items: flex-start;
 	padding: 20px;
 	border-radius: 5px;
-	/* background-color: black; */
 	/*box-shadow: 0px 0px 50px var(--shadow);*/
 	/*box-shadow: 0px 0px 5px var(--shadow);*/
 	/*transition: box-shadow 0.3s ease-in-out;*/
 	transition: transform 0.1s ease-in-out;
-
+	
 	margin: 1em;
-	outline: 2px solid #282c34;
-
-	box-shadow: 0 0 1rem rgb(0, 0, 0);
+	
+	outline: 1px solid #282c34;
+	background-color: hsla(225, 13%, 12%, 0.233);
+	/* box-shadow: 0 0 1rem rgb(0, 0, 0); */
 }
 
 .project:hover {

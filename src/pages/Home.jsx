@@ -38,7 +38,7 @@ export default function ProjectList(props) {
 			</Helmet>
 
 			{/* <div className='landing-background-anim1'></div> */}
-			<div className='landing-background-anim2'></div>
+			<div className='landing-background-anim'></div>
 			{/* <div className='noise'></div> */}
 
 			<p className="large-text top" ref={(el) => (animate.current[0] = el)}>Hi there, I'm <span>Dot32</span></p>

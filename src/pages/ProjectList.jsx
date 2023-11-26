@@ -20,9 +20,11 @@ export default function ProjectList(props) {
 			<br/>
 			<br/>
 
-			{/* <h1>Projects</h1> */}
+			{/* <div className='landing-background-anim' style={{backgroundImage: "linear-gradient(green, blue)", left: "100%", top: "100vh"}}></div> */}
 
-			<h2>Featured</h2>
+			<h1>Projects</h1>
+
+			{/* <h2>Featured</h2> */}
 
 			<Project
 			name="This Website"

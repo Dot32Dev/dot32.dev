@@ -13,8 +13,24 @@
 
 h2 {
   /* color: rgb(248, 246, 227); */
-  border-bottom: 2px solid #282c34;
+  border-bottom: 1px solid #282c34;
   font-size: 2em;
+}
+
+.tutorial h2 {
+  /* border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem; */
+  border-radius: 0.5rem;
+
+  /* border-bottom: none; */
+  border-top: 1px solid #282c34;
+  border-right: 1px solid #282c34;
+  border-left: 1px solid #282c34;
+  padding: 1rem;
+
+  /* box-shadow: 0 -1rem 1rem rgb(0, 0, 0); */
+
+  /* background: linear-gradient(180deg, rgb(10.44% 11.22% 13.56% / 0.233) 0%, rgb(10.399% 11.176% 13.507% / 0.23208984375000002) 6.25%, rgb(10.277% 11.045% 13.348% / 0.229359375) 12.5%, rgb(10.073% 10.826% 13.083% / 0.22480859375) 18.75%, rgb(9.787% 10.519% 12.712% / 0.2184375) 25%, rgb(9.42% 10.124% 12.236% / 0.21024609375) 31.25%, rgb(8.972% 9.642% 11.653% / 0.20023437500000002) 37.5%, rgb(8.442% 9.072% 10.965% / 0.18840234375) 43.75%, rgb(7.83% 8.415% 10.17% / 0.17475000000000002) 50%, rgb(7.137% 7.67% 9.27% / 0.15927734375000002) 56.25%, rgb(6.362% 6.837% 8.263% / 0.141984375) 62.5%, rgb(5.505% 5.917% 7.151% / 0.12287109375000001) 68.75%, rgb(4.567% 4.909% 5.933% / 0.10193750000000001) 75%, rgb(3.548% 3.813% 4.608% / 0.07918359375) 81.25%, rgb(2.447% 2.63% 3.178% / 0.054609375000000016) 87.5%, rgb(1.264% 1.359% 1.642% / 0.028214843749999996) 93.75%, rgb(0% 0% 0% / 0) 100% ); */
 }
 
 h2 span {
@@ -478,7 +494,7 @@ hr {
 
 .contents {
 	/* width: 80%; */
-	max-width: 250px;
+	max-width: 290px;
 	pointer-events: auto;
 	box-sizing: border-box;
 	/* display: none; */
@@ -487,10 +503,10 @@ hr {
   /* padding-left: 10%; */
   width: fit-content;
   margin: auto;
-  /* padding: 2rem; */
+  padding: 2rem;
   /* margin-right: 2rem; */
   /* background-color: #14161a; */
-  /* border-radius: 0.3rem; */
+  border-radius: 0.5rem;
   /* border: 1px solid #30363d; */
   /* border-right: 1px solid #30363d; */
   /* border-left: 1px solid #30363d; */
@@ -498,6 +514,10 @@ hr {
   /* border-bottom: 1px solid #30363d; */
   /* background-color: rgba(0, 0, 0, 0.15); */
   /* background-color: black; */
+
+  border: 1px solid #282c34;
+	/* background-color: hsla(225, 13%, 12%, 0.233); */
+	/* box-shadow: 0 0 1rem rgb(0, 0, 0); */
 }
 
 .contents-container:first-child .contents {
@@ -624,11 +644,15 @@ code::after {
   /* backdrop-filter: blur(5px); */
 }
 
-/* video, img, .hljs {
+.tutorial video, .tutorial img, .hljs {
   border: 1px solid #282c34;
   border-radius: 0.5rem;
-  box-shadow: 0 0 1rem rgb(0, 0, 0);
-} */
+  /* box-shadow: 0 0 1rem rgb(0, 0, 0); */
+}
+
+.hljs {
+  border: 1px solid hsl(295, 13%, 30%);
+}
 
 .large-text.top {
   z-index: 1;
@@ -638,22 +662,20 @@ code::after {
   border-radius: 50%;
 }
 
-.noise {
+/* .noise {
   background-image: url(/images/bg_noise.webp);
   background-repeat: repeat;
   mix-blend-mode: overlay;
-  /* opacity: 0;
-  opacity: 0.7; */
 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  /* z-index: 20; */
+
   pointer-events: none;
   display: block;
-}
+} */
 
 @keyframes rotate {
   0% {
@@ -664,9 +686,8 @@ code::after {
   }
 }
 
-.landing-background-anim1, 
-.landing-background-anim2 {
-  --size: 550px;
+.landing-background-anim {
+  --size: 750px;
   /* --speed: 50s; */
   --speed: 15s;
   --easing: cubic-bezier(0.8, 0.2, 0.2, 0.8);
@@ -675,23 +696,24 @@ code::after {
   height: var(--size);
   position: absolute;
 
-  bottom: 0%;
-  left: 30%;
+  top: 32%;
+  left: 70%;
   transform: translate(calc(var(--size) / -2), calc(var(--size) / -2));
   margin-top: calc(var(--size) / -2);
   margin-left: calc(var(--size) / -2);
 
   filter: blur(calc(var(--size) / 5));
   opacity: 0.3;
-  background-image: linear-gradient(#76b1e8, #5069cb);
+  background-image: linear-gradient(red, blue);
   /* animation: rotate var(--speed) var(--easing) alternate infinite; */
   border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  /* view-transition-name: orb; */
+
+  z-index: -20;
 }
 
-.landing-background-anim2 {
-  --size: 750px;
-  top: 30%;
-  left: 70%;
-  /* left: 50%; */
-  background-image: linear-gradient(red, blue);
+em {
+	/* font-weight: bold; */
+	border-bottom-style: solid;
+	border-color: orange;
 }

@@ -18,7 +18,7 @@ local player = {
 ```
 The `V` stands for velocity, and will be how we track the players momentum. When moving our player, instead of directly modifying the player's location, will we add to its velocity, its speed. This allows the player to build speed over time and conserve it. We will continuously add the players velocity to its position to achieve the appearance of motion. 
 
-Here, a square is being drawn at the players coordinates as its velocity is increased every frame.
+Here, a square is being drawn at the player's coordinates as its velocity is increased every frame.
 
 <video autoplay="" playsinline="" loop="" muted="">
   <source src="/images/velocity.mp4" type="video/mp4">
@@ -36,7 +36,7 @@ end
 The player's `x` position is being updated by its velocity every frame, and the velocity is being increased every frame. This creates the effect of ever-accelerating motion!
 As the player is constantly being moved by a larger and larger value, it appears to speed up over time. In a platformer, this is how gravity is simulated!
 
-Next in moving the player is accepting player input. It's pretty simple, you just add to the velocity for the direction that you are going. If the right key is pressed, add one to the `x` velocity, and if left key is pressed, subtract one. However, we run into an issue. Once you get going, it's almost impossible to slow down. This is solved by constantly multiplying the velocity by a friction value, or lerping it to zero.
+Next in moving the player is accepting player input. It's pretty simple, you just add to the velocity for the direction that you are going. If the right key is pressed, add to the `x` velocity, and if the left key is pressed, subtract. However, we run into an issue. Once you get going, it's almost impossible to stop. This is solved by continuously multiplying the velocity by a friction value, or lerping it to zero.
 ```lua
 player.xV = player.xV * 0.9
 ```
@@ -44,7 +44,7 @@ This will subtract 10% of the players speed every frame, eventually bringing the
 <video autoplay="" playsinline="" loop="" muted="">
   <source src="/images/movement.mp4" type="video/mp4">
 </video>
-Now, I'm going to add gravity by constantly adding to the `y` velocity as described earlier. Note that there is no reason to put friction on the sky, unless you really want air resistance. But oh no! I'm just falling into the void!
+Now, I will introduce gravity by constantly adding to the `y` velocity as described earlier. Note that there is no reason to put friction on the sky, unless you really want air resistance. But oh no! I'm just falling into the void!
 
 ## The Basic Solution
 Add an if statement to check if the player is off the screen. If it is, set its `y` position to just above the edge of the screen. 
@@ -54,7 +54,7 @@ if player.y + player.height > 600 then
 	player.yV = 0
 end
 ```
-In this example, the height of the window is 600. Our player is stored as a position, and with `width`/`height` properties that extends it to the bottom right. We want to collide if the bottom of the player begins going off-screen, so we check for `player.y + player.height`. Upon sinking below the floor, we want to set the player back on top of the floor, so we set its position to `600 - player.height`. We also reset the players `y` velocity to avoid unnecessarily moving the player further, and to avoid issues that could arise in the future from not doing so. Currently it won't make much of a difference as the the if statement will keep resetting it back anyway. 
+In this example, the height of the window is 600. Our player is stored as a position, and with `width`/`height` properties extending to the bottom right. We want to collide if the bottom of the player begins going off-screen, so we check for `player.y + player.height`. Upon sinking below the floor, we want to set the player back on top of the floor, so we set its position to `600 - player.height`. We also reset the player's `y` velocity to avoid unnecessarily moving the player further, and to avoid issues that could arise in the future from not doing so. Currently it won't make much of a difference as the the if statement will keep resetting it back anyway. 
 
 You can also add jump logic inside the if statement, because this code will always be run when the player is on the ground.
 ```lua
@@ -112,13 +112,17 @@ But this has a glaring issue! You probably already saw this coming, but this cod
 ![Screenshot 2023-07-22 at 15.08.28.png](https://cdn.discordapp.com/attachments/577832597686583310/1132284103128002662/Screenshot_2023-07-22_at_15.08.28.png)
 
 ## AABB Collision Detection
-AABB collision detection, short for "Axis Align Bounding Box" collision detection, is a method of computing interception between two unrotated rectangles that is very simple and efficient. 
+AABB collision detection, short for "Axis Align Bounding Box" collision detection, is a method of detecting interception between two unrotated rectangles that is very simple and efficient. 
 
-Consider two rectangles, that may or may not be intercepting eachother. If the x position of the left side of the first rectangle is less than x position right side of the second rectangle, *and* the x position of the right side of the first rectangle is greater than the x position of the left side of the second triangle, then the two rectangles are overlapping on the X axis!
+In our engine's current state, we are checking for whether the bottom of our player crosses below the top of our platform or not. However, this was an incomplete simplification, even for the Y axis. If the player is completely below the platform, it should not count as a collision. We need to do our current check, *and also* check that the top of the player is above the bottom of the platform. If both of these are true, then the player must be intercepting with the platform on the Y axis!
 
-The exact same is true for the Y axis! If the y position of the top of the first rectangle is less than the than the bottom of the second rectangle, and the y position of the bottom of the first rectangle is greater than the y position of the top of the second rectangle, then the rectangles must be overlapping on the Y axis. 
+Similarily for the X axis, if the right side of the player is "more right" than the platform's left side, and the player's left side is "more left" than the platforms right side, we have interception on the X axis!
 
-If the rectangles are overlapping on both the X axis and the Y axis, then they must be colliding! 
+<!-- Consider two rectangles, that may or may not be intercepting eachother. If the x position of the left side of the first rectangle is less than x position right side of the second rectangle, *and* the x position of the right side of the first rectangle is greater than the x position of the left side of the second triangle, then the two rectangles are overlapping on the X axis!
+
+The exact same is true for the Y axis! If the y position of the top of the first rectangle is less than the than the bottom of the second rectangle, and the y position of the bottom of the first rectangle is greater than the y position of the top of the second rectangle, then the rectangles must be overlapping on the Y axis.  -->
+
+In order for a collision to occur, we must be overlapping on both the X and Y axises. 
 
 ![aabb explanation.png](https://cdn.discordapp.com/attachments/577832597686583310/1132284641710186536/aabb_explanation.png)
 If you understand the logic behind it, we can now continue onto the implementation. While the logic can be written as a single if statement, i'm going to divide it into a couple functions, the reason to which will be explained later on. 

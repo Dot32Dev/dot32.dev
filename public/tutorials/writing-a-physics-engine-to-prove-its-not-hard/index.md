@@ -164,11 +164,11 @@ However, what we have achieved still isn't perfect! In fact, there are more glar
 ## Resolving the Collision Correctly 
 In order to know which way to resolve the collision, you must know what direction the player entered the platform from. In order to know what direction the player entered the platform from, you must know where the player was in the previous frame. That's one way to do it at least. 
 
-See, on the previous frame, you can be sure that the player wasn't colliding. If it did collide, it would have moved itself out and you wouldn't be colliding this frame. But more specifically, we are looking for collisions on __certain axis's__, and this is why we wrote two seperate functions for the AABB collision. If, in the previous frame, the player was within the bounds of the platform on only the X, but not the Y, and in this frame we are colliding, then we know the collision that just occurred happened because the player entered the platforms Y bounds. This limits the possible impact directions to being either up or down, and tells us the collision resolution should effect the players `y` position. If instead, the collision happed because the player entered the X bounds, then we know we need to resolve the collision by changing the `x` position. 
+See, on the previous frame, you can be sure that the player wasn't colliding. If it did collide, it would have moved itself out and you wouldn't be colliding this frame. But more specifically, we are looking for collisions on __certain axis's__, and this is why we wrote two seperate functions for the AABB collision. If, in the previous frame, the player was within the bounds of the platform on only the X, but not the Y, and in this frame we are colliding, then we know the collision that just occurred happened because the player entered the platform's Y bounds. This limits the possible impact directions to being either up or down, and tells us the collision resolution should effect the players `y` position. If instead, the collision happed because the player entered the X bounds, then we know we need to resolve the collision by changing the `x` position. 
 
 ![resolution explanation 1.png](https://cdn.discordapp.com/attachments/577832597686583310/1132285345057210409/resolution_explanation.png)
 
-However, this doesn't directly tell us which direction to move, only the axis to move in. In order to infer the precise direction, we can take a look at the velocity. If we know we're on the Y axis, and the Y velocity is positive, we can assume that we were moving downwards and therefor need to move upward out of the platform. If instead the Y velocity is negative, we must have been moving upwards and be in need of moving down. As with all things, this applies to the X axis as well.
+However, this doesn't directly tell us which direction to move, only the axis to move in. In order to infer the correct direction, we can take a look at the velocity. If we know we're on the Y axis, and the Y velocity is positive, we can assume that we were moving downwards and therefor need to move upward out of the platform. If instead the Y velocity is negative, we must have been moving upwards and be in need of moving down. As with all things, this applies to the X axis as well.
 
 Now that i've explained the theory, we can get into the implementation. I'm going to write a function to calculate where the player previously was based on its velocity. If we subtract the players velocity from its current position, we find its previous location. I will place the function in the player table for organisation reasons.
 ```lua
@@ -247,7 +247,7 @@ If you would also like to add circles to your physics engine, check out my [circ
 		"archived": false,
 		"author": "Dot32",
 		"date": "22nd Jul 2023",
-		"edited": "25th Nov 2023",
+		"edited": "26th Nov 2023",
 		"title": "Writing a physics engine to prove it's not hard",
     	"description": "A tutorial on how to write a custom physics engine.",
 		"image": "/tutorials/writing-a-physics-engine-to-prove-its-not-hard/thumb.gif"

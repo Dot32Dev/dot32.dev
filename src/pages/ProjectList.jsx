@@ -50,15 +50,31 @@ export default function ProjectList(props) {
 			description="Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!"
 			/>
 
-			<h2>Recent <span>(Last updated 20th Jul 2023)</span></h2>
+			<h2>Recent <span>(Last updated 26th Nov 2023)</span></h2>
 
-			{/* <Project
+			<Project
+			name="Auto Undiscord"
+			link="https://github.com/Dot32IsCool/auto_undiscord"
+			image="/images/undiscord_project.png"
+			tags="Requires Rust compiler"
+			description="Automatically replaces a website's images hosted on Discord's CDN by downloading them and updating the source code."
+			/>
+
+			<Project
+			name="Assembly Clock"
+			link="https://github.com/Dot32IsCool/assembly-clock"
+			image="/images/assembly_project.png"
+			tags="Assembly"
+			description="A mock 12 hour clock written in 8086 assembly"
+			/>
+
+			<Project
 			name="2D Planet Generator"
 			link="https://github.com/Dot32IsCool/planet_gen"
-			image="/images/Screenshot_2023-07-20_at_11.10.49.png"
+			image="/images/planet_project.png"
 			tags="Requires Rust compiler"
 			description="Built from my Marching Squares project"
-			/> */}
+			/>
 			
 			<Project
 			name="Marching Squares"

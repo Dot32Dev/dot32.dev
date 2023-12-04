@@ -14,7 +14,11 @@ export default function Project(props) {
 					<a href={props.link} target="_blank">
 						<h2>{props.name} <span className="fas fa-external-link-alt"/></h2>
 					</a>
-					<span className="tag">{props.tags}</span>
+					<div className='tags-wrapper-or-whatever'>
+						{props.tags.map((i, index) => (
+							<span key={index} className='tag'>{i}</span>
+						))}
+					</div>
 					<p>{props.description}</p>
 				</div>
 			</div>
@@ -29,7 +33,11 @@ export default function Project(props) {
 					<AnimatedLink to={props.link}>
 						<h2>{props.name} <span className="fas fa-external-link-alt"/></h2>
 					</AnimatedLink>
-					<span className="tag">{props.tags}</span>
+					<div className='tags-wrapper-or-whatever'>
+						{props.tags.map((i, index) => (
+							<span key={index} className='tag'>{i}</span>
+						))}
+					</div>
 					<p>{props.description}</p>
 				</div>
 			</div>

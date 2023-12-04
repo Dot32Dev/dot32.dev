@@ -95,6 +95,7 @@ span.tag {
 	padding-right: 10px;
 	padding-left: 10px;
 	color: white;
+	margin-right: 0.5rem;
 }
 
 .project p {
@@ -135,3 +136,7 @@ span.tag {
 		transform: scale(1);
 	}
 }
+
+.tags-wrapper-or-whatever {
+	margin: 0 !important;
+  }

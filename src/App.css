@@ -20,12 +20,12 @@ h2 {
 .tutorial h2 {
   /* border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem; */
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
 
   /* border-bottom: none; */
-  border-top: 1px solid #282c34;
-  border-right: 1px solid #282c34;
-  border-left: 1px solid #282c34;
+  /* border-top: 1px solid #282c34; */
+  /* border-right: 1px solid #282c34; */
+  /* border-left: 1px solid #282c34; */
   padding: 1rem;
 
   /* box-shadow: 0 -1rem 1rem rgb(0, 0, 0); */
@@ -150,7 +150,8 @@ video {
 
 :not(header > nav > ul > li > a) > p, :not(header > nav) > ul {
   font-size: 1.3em;
-  line-height: 1.68;
+  /* line-height: 1.68; */
+  line-height: 1.7;
 }
 
 code {
@@ -506,16 +507,16 @@ hr {
   padding: 2rem;
   /* margin-right: 2rem; */
   /* background-color: #14161a; */
-  border-radius: 0.5rem;
+  /* border-radius: 0.5rem; */
   /* border: 1px solid #30363d; */
-  /* border-right: 1px solid #30363d; */
+  border-right: 1px solid #30363d;
   /* border-left: 1px solid #30363d; */
   /* border-top: 1px solid #30363d; */
   /* border-bottom: 1px solid #30363d; */
   /* background-color: rgba(0, 0, 0, 0.15); */
   /* background-color: black; */
 
-  border: 1px solid #282c34;
+  /* border: 1px solid #282c34; */
 	/* background-color: hsla(225, 13%, 12%, 0.233); */
 	/* box-shadow: 0 0 1rem rgb(0, 0, 0); */
 }
@@ -523,8 +524,8 @@ hr {
 .contents-container:first-child .contents {
   /* border-left: none; */
   /* border-right: 1px solid #30363d; */
-  /* border-right: none;
-  border-left: 1px solid #30363d; */
+  border-right: none;
+  border-left: 1px solid #30363d;
 }
 
 @media (max-width: 1250px) { 
@@ -645,7 +646,7 @@ code::after {
 }
 
 .tutorial video, .tutorial img, .hljs {
-  border: 1px solid #282c34;
+  /* border: 1px solid #282c34; */
   border-radius: 0.5rem;
   /* box-shadow: 0 0 1rem rgb(0, 0, 0); */
 }

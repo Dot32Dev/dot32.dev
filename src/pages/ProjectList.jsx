@@ -45,7 +45,7 @@ export default function ProjectList(props) {
 			<Project
 			name="Tiny Tank"
 			link="https://dot32.itch.io/tiny-tank"
-			image="https://media.discordapp.net/attachments/577832597686583310/1147026485710966834/tinytankthumb.png"
+			image="/images/tinytankthumb.png"
 			tags={["Windows", "MacOS"]}
 			description="Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!"
 			/>
@@ -103,7 +103,7 @@ export default function ProjectList(props) {
 			<Project
 			name="Discord Timezone Generator"
 			link="https://discordtimezonegenerator.netlify.app/"
-			image="https://media.discordapp.net/attachments/577832597686583310/1131426943028432906/Screenshot_2023-07-20_at_11.26.38.png"
+			image="/images/timezonethumb.png"
 			tags={["Website"]}
 			description="Show your timezone in your Discord profile for others to see!"
 			/>
@@ -247,7 +247,7 @@ export default function ProjectList(props) {
 			<Project
 			name="Quick and simple platformer"
 			link="https://github.com/Dot32IsCool/QuickAndSimplePlatformer-Game"
-			image="https://media.discordapp.net/attachments/577832597686583310/1147026617831538788/qspthumb.png?width=1722&height=1294"
+			image="/images/qspthumb.png"
 			tags={["Windows, MacOS"]}
 			description="Contrary to the name, most people take a while to finish due to the janky physics. Nevertheless, this game has speedrunning potential"
 			/>  

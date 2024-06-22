@@ -3,12 +3,32 @@ import { Link } from 'react-router-dom'
 import { useNavigate} from 'react-router-dom';
 
 export default function Project(props) {
-	// if props.link is external
+	// Check if 'project_list_minified' is present in the image URL
+	const isMinified = props.image.includes('project_list_minified');
+  
+	// Define the non-minified image URL if minified is present
+	let originalImage = isMinified ? props.image.replace('project_list_minified', 'project_list') : props.image;
+
+	// Replace '.webp' with '.png' in the original image URL
+	originalImage = originalImage.replace('.webp', '.png');
+
 	if (props.link.startsWith("http")) {
 		return (
 			<div className="project">
 				<a href={props.link} target="_blank">
-					<img src={props.image}/>
+					{isMinified ? (
+						<picture>
+						<source 
+							media="(orientation: portrait)"
+							srcSet={originalImage} />
+						<source 
+							media="(orientation: landscape)"
+							srcSet={props.image} />
+						<img src={props.image} loading="lazy" alt="image" />
+						</picture>
+					) : (
+						<img src={props.image} loading="lazy" alt="image" />
+					)}
 				</a>
 				<div>
 					<a href={props.link} target="_blank">

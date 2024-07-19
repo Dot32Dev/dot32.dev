@@ -140,16 +140,16 @@ end
 Our collision function can now be rewritten like so:
 ```lua
 for i, platform in ipairs(platforms) do
-		if aabb_x_check(player, platform) 
-		and aabb_y_check(player, platform) then
-			player.y = platform.y - player.height
-			player.yV = 0
+	if aabb_x_check(player, platform) 
+	and aabb_y_check(player, platform) then
+		player.y = platform.y - player.height
+		player.yV = 0
 
-			if love.keyboard.isDown("up") then
-				player.yV = -5
-			end
+		if love.keyboard.isDown("up") then
+			player.yV = -5
 		end
 	end
+end
 ```
 Et voilà! We now correctly detect when or when not we are colliding with the platforms! 
 <video autoplay="" playsinline="" loop="" muted="">
@@ -194,36 +194,37 @@ local player = {
 In order to call this function we will need to call `player:previous()`. And with that out of the way, lets write this physics resolution! 
 ```lua
 for i, platform in ipairs(platforms) do
-		if aabb_x_check(player, platform) 
-		and aabb_y_check(player, platform) then
-			if aabb_x_check(player:previous(), platform) then
-				-- Resolve on the Y axis
-				if player.yV > 0 then
-					-- Player was falling downwards. Resolve upwards.
-					player.y = platform.y - player.height
-					player.yV = 0
-					-- The Player is on the ground and can jump
-					if love.keyboard.isDown("up") then
-						player.yV = -5
-					end
-				else 
-					-- Player was moving upwards. Resolve downwards
-					player.y = platform.y + platform.height
-					player.yV = 0
+	if aabb_x_check(player, platform) 
+	and aabb_y_check(player, platform) then
+		if aabb_x_check(player:previous(), platform) then
+			-- Resolve on the Y axis
+			if player.yV > 0 then
+				-- Player was falling downwards. Resolve upwards.
+				player.y = platform.y - player.height
+				player.yV = 0
+				-- The Player is on the ground and can jump
+				if love.keyboard.isDown("up") then
+					player.yV = -5
 				end
-			elseif aabb_y_check(player:previous(), platform) then
-				-- Resolve on the X axis
-				if player.xV > 0 then
-					-- Player was traveling right. Resolve to the left
-					player.x = platform.x - player.width
-					player.xV = 0
-				else
-					-- Player was traveling left. Resolve to the right
-					player.x = platform.x + platform.width
-					player.xV = 0
-				end
+			else 
+				-- Player was moving upwards. Resolve downwards
+				player.y = platform.y + platform.height
+				player.yV = 0
+			end
+		elseif aabb_y_check(player:previous(), platform) then
+			-- Resolve on the X axis
+			if player.xV > 0 then
+				-- Player was traveling right. Resolve to the left
+				player.x = platform.x - player.width
+				player.xV = 0
+			else
+				-- Player was traveling left. Resolve to the right
+				player.x = platform.x + platform.width
+				player.xV = 0
 			end
 		end
+	end
+end
 ```
 Some important things to note!
 - The player is only allowed to jump in the case that the collision resolved upwards, out of the ground. 

@@ -109,7 +109,7 @@ for i, platform in ipairs(platforms) do -- Loop over platforms
 end
 ```
 But this has a glaring issue! You probably already saw this coming, but this code only compares the Y values. Collision is detected even when the player walks off the end of the platform.
-![Screenshot 2023-07-22 at 15.08.28.png](https://cdn.discordapp.com/attachments/577832597686583310/1132284103128002662/Screenshot_2023-07-22_at_15.08.28.png)
+![Screenshot 2023-07-22 at 15.08.28.png](/tutorials/writing-a-physics-engine-to-prove-its-not-hard/Screenshot_2023-07-22_at_15.08.28.png)
 
 ## AABB Collision Detection
 AABB collision detection, short for "Axis Align Bounding Box" collision detection, is a method of detecting interception between two unrotated rectangles that is very simple and efficient. 
@@ -124,7 +124,7 @@ The exact same is true for the Y axis! If the y position of the top of the first
 
 In order for a collision to occur, we must be overlapping on both the X and Y axises. 
 
-![aabb explanation.png](https://cdn.discordapp.com/attachments/577832597686583310/1132284641710186536/aabb_explanation.png)
+![aabb explanation.png](/tutorials/writing-a-physics-engine-to-prove-its-not-hard/aabb_explanation.png)
 If you understand the logic behind it, we can now continue onto the implementation. While the logic can be written as a single if statement, i'm going to divide it into a couple functions, the reason to which will be explained later on. 
 ```lua
 function aabb_x_check(player, platform)
@@ -166,7 +166,7 @@ In order to know which way to resolve the collision, you must know what directio
 
 See, on the previous frame, you can be sure that the player wasn't colliding. If it did collide, it would have moved itself out and you wouldn't be colliding this frame. But more specifically, we are looking for collisions on _certain axis's_, and this is why we wrote two seperate functions for the AABB collision. If, in the previous frame, the player was within the bounds of the platform on only the X, but not the Y, and in this frame we are colliding, then we know the collision that just occurred happened because the player entered the platform's Y bounds. This limits the possible impact directions to being either up or down, and tells us the collision resolution should effect the players `y` position. If instead, the collision happed because the player entered the X bounds, then we know we need to resolve the collision by changing the `x` position. 
 
-![resolution explanation 1.png](https://cdn.discordapp.com/attachments/577832597686583310/1132285345057210409/resolution_explanation.png)
+![resolution explanation 1.png](/tutorials/writing-a-physics-engine-to-prove-its-not-hard/resolution_explanation.png)
 
 However, this doesn't directly tell us which direction to move, only the axis to move in. In order to infer the correct direction, we can take a look at the velocity. If we know we're on the Y axis, and the Y velocity is positive, we can assume that we were moving downwards and therefor need to move upward out of the platform. If instead the Y velocity is negative, we must have been moving upwards and be in need of moving down. As with all things, this applies to the X axis as well.
 

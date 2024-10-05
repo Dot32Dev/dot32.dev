@@ -50,7 +50,39 @@ export default function ProjectList(props) {
 			description="Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!"
 			/>
 
-			<h2>Recent <span>(Last updated 26th Nov 2023)</span></h2>
+			<h2>Recent <span>(Last updated 5th Oct 2024)</span></h2>
+
+			<Project
+			name="WGPU and Winit graphics project"
+			link="https://github.com/Dot32Dev/winit_test"
+			image="/images/project_list_minified/wgpu_project.webp"
+			tags={["Requires Rust Compiler", "WGSL"]}
+			description="In this project I learnt about low level graphics. WGPU powers the WebGPU standard in Firefox, Winit is a windowing library."
+			/>
+
+			{/* <Project
+			name="Math interpreter"
+			link="https://github.com/Dot32Dev/math_interpreter"
+			image="/images/project_list_minified/math_interpreter.webp"
+			tags={["Requires Rust Compiler"]}
+			description="Takes a string as input and executes it. Supports order of operations, many operators, and the variable Pi."
+			/> */}
+
+			<Project
+			name="WebGPU Raymarching"
+			link="https://github.com/Dot32Dev/webgpu"
+			image="/images/project_list_minified/webgpu_raymarcher.webp"
+			tags={["Website", "WGSL"]}
+			description="Raymarches a little guy onto your screen."
+			/>
+
+			<Project
+			name="Print Splicer"
+			link="https://github.com/Dot32Dev/print-splicer"
+			image="/images/project_list_minified/print_splicer.webp"
+			tags={["Requires Rust Compiler", "Tauri"]}
+			description="Divide an image into several A4 sized pieces. This enables printing of large posters by stitching together multiple A4 pieces."
+			/>
 
 			<Project
 			name="Auto Undiscord"
@@ -88,7 +120,7 @@ export default function ProjectList(props) {
 			name="Ui Synthesizer"
 			link="https://github.com/Dot32IsCool/ui_synth"
 			image="/images/project_list_minified/Screenshot_2023-03-09_at_12.50.46.webp"
-			tags={["Requires Rust compiler"]}
+			tags={["Requires Rust compiler", "Tauri"]}
 			description="A UI for my Rodio Synthesizer - MIDI keyboard not required!"
 			/>
 

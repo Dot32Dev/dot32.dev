@@ -50,7 +50,47 @@ export default function ProjectList(props) {
 			description="Fight your way through a series of levels with intelligent AI and try not to die in this top down shooter!"
 			/>
 
-			<h2>Recent <span>(Last updated 5th Oct 2024)</span></h2>
+			<h2>Recent <span>(Last updated 24th Aug 2025)</span></h2>
+
+			<Project
+			name="Dijkstra's Algorithm"
+			link="https://github.com/Dot32Dev/learning_graphics"
+			image="/images/project_list_minified/pathfinding.webp"
+			tags={["Requires Rust Compiler"]}
+			description="An implementation of Dijkstra's pathfinding algorithm on a graph."
+			/>
+
+			<Project
+			name="Dual-Grid autotiling with C and OpenGL"
+			link="https://github.com/Dot32Dev/learning_graphics"
+			image="/images/project_list_minified/learningopengl.webp"
+			tags={["C", "OpenGL", "GLFW"]}
+			description="Created as a project to learn C and OpenGL"
+			/>
+			
+			<Project
+			name="Dual-Grid Autotiling"
+			link="https://github.com/Dot32Dev/dualgrid"
+			image="/images/project_list_minified/dualgrid.webp"
+			tags={["Love2D", "Lua"]}
+			description="Better autotiling than every before with only five tiles."
+			/>
+			
+			<Project
+			name="Stack Machine"
+			link="https://github.com/Dot32Dev/stack_machine"
+			image="/images/project_list_minified/stackmachine2.webp"
+			tags={["Requires Rust Compiler", "egui", "Interpreter"]}
+			description="A math interpreter with a GUI. Compiles your equations into stack-based instructions and then executes it."
+			/>
+			
+			<Project
+			name="Connect Four AI"
+			link="https://github.com/Dot32Dev/connect4_ai_website"
+			image="/images/project_list_minified/connect4ai.webp"
+			tags={["Website", "Neural Network", "Web Assembly"]}
+			description="Play against a very uninteligent AI running on Web Assembly in your browser."
+			/>
 
 			<Project
 			name="WGPU and Winit graphics project"

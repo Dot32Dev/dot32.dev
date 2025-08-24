@@ -73,7 +73,7 @@ export default function ProjectList(props) {
 			link="https://github.com/Dot32Dev/dualgrid"
 			image="/images/project_list_minified/dualgrid.webp"
 			tags={["Love2D", "Lua"]}
-			description="Better autotiling than every before with only five tiles."
+			description="Better autotiling than ever before with only five tiles."
 			/>
 			
 			<Project

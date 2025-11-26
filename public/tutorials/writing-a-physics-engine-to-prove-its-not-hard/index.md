@@ -9,10 +9,10 @@ When it comes to implementing basic physics in games, many resort to the all in 
 Start by creating a `player` table to store properties such as position and speed. 
 ```lua
 local player = {
-	x=0,
-	y=0,
-	xV=0,
-	yV=0,
+	x = 0,
+	y = 0,
+	xV = 0,
+	yV = 0,
 	-- You may also add width/height properties
 }
 ```
@@ -80,17 +80,17 @@ Now, lets abstract the collision into a `platforms` table, rather than hard codi
 local platforms = {
 	{
 		-- Floor
-		x=0,
-		y=600,
-		width=800,
-		height=10,
+		x = 0,
+		y = 600,
+		width = 800,
+		height = 10,
 	},
 	{
 		-- Different platform
-		x=450,
-		y=500,
-		width=100,
-		height=30,
+		x = 450,
+		y = 500,
+		width = 100,
+		height = 30,
 	}
 }
 ```

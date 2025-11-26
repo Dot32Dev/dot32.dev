@@ -54,7 +54,7 @@ export default function ProjectList(props) {
 
 			<Project
 			name="Dijkstra's Algorithm"
-			link="https://github.com/Dot32Dev/learning_graphics"
+			link="https://github.com/Dot32Dev/dijkstra"
 			image="/images/project_list_minified/pathfinding.webp"
 			tags={["Requires Rust Compiler"]}
 			description="An implementation of Dijkstra's pathfinding algorithm on a graph."

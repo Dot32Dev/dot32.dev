@@ -170,23 +170,23 @@ See, on the previous frame, you can be sure that the player wasn't colliding. If
 
 However, this doesn't directly tell us which direction to move, only the axis to move in. In order to infer the correct direction, we can take a look at the velocity. If we know we're on the Y axis, and the Y velocity is positive, we can assume that we were moving downwards and therefor need to move upward out of the platform. If instead the Y velocity is negative, we must have been moving upwards and be in need of moving down. As with all things, this applies to the X axis as well.
 
-Now that i've explained the theory, we can get into the implementation. I'm going to write a function to calculate where the player previously was based on its velocity. If we subtract the player's velocity from its current position, we find its previous location. I will place the function in the player table for organisation purposes.
+Now that i've explained the theory, we can get into the implementation. I'm going to write a function to calculate where the player previously was based on its velocity. If we subtract the player's velocity from its current position, we find its previous location (given that we are not using Delta Time). I will place the function in the player table for organisation purposes.
 ```lua
 local player = {
-	x=400-20,
-	y=300,
-	xV=0,
-	yV=0,
-	width=40,
-	height=40,
-	previous=function(self) 
+	x = 400 - 20,
+	y = 300,
+	xV = 0,
+	yV = 0,
+	width = 40,
+	height = 40,
+	previous = function(self) 
 		-- Return a table compatible with our AABB functions
 		return {
 			-- Calculates previous position
-			x=self.x - self.xV,
-			y=self.y - self.yV,
-			width=self.width,
-			height=self.height,
+			x = self.x - self.xV,
+			y = self.y - self.yV,
+			width = self.width,
+			height = self.height,
 		}
 	end,
 }

@@ -27,7 +27,7 @@ export default function TutorialList(props) {
 			link="/tutorials/writing-a-physics-engine-to-prove-its-not-hard"
 			image="/tutorials/writing-a-physics-engine-to-prove-its-not-hard/thumb.gif"
 			tags={["Lua", "22nd Jul 2023"]}
-			description="A tutorial on how to write a custom physics engine."
+			description="A tutorial on how to write a custom platformer physics engine."
 			/>
 
 			<Project
